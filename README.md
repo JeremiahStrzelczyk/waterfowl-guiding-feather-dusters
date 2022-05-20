@@ -1,35 +1,17 @@
-# waterfowl-guiding-feather-dusters
+# Waterfowl Guiding - Feather Dusters
+
+A full stack web application designed to be used as the main user interface to attract and build a strong client base in hunting.
 
 # Dependencies
 
-### Bootstrap
+- [Bootstrap](https://react-bootstrap.github.io/getting-started/introduction): For styling across the website.
+- [Express backend](https://expressjs.com/): Framework used to wrap HTTP requests and responses.
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start): Used to navigate across the website.
+- [React Router Bootstrap](https://www.npmjs.com/package/react-router-bootstrap): Used to wrap 'BrowserRouter' `Link`s around Bootstrap styled navigation links
 
 ```
 npm i react-bootstrap bootstrap
-```
-
-Bootstrap was used to style a significant portion of this project
-
-### Express Backend
-
-```
 npm i express
-```
-
-Express framework was used to wrap HTTP requests and responses.
-
-### React Router
-
-```
 npm i react-router-dom
-```
-
-React Router Dom was used to navigate the web application.
-
-### React Router Bootstrap
-
-```
 npm i react-router-bootstrap
 ```
-
-Used to wrap 'BrowserRouter' Links around Bootstrap styled navigation links.
