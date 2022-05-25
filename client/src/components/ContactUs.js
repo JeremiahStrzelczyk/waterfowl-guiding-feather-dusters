@@ -44,7 +44,7 @@ export const ContactUs = () => {
               <Col>
                 <GuideContactInfo
                   guide={"Zackary Russell"}
-                  phone={"509-431-8165"}
+                  phone={"509-770-5571"}
                 />
               </Col>
               <Col>
