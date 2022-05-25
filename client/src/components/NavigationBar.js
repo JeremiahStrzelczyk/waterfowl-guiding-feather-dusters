@@ -4,7 +4,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import companyLogo from "../images/logo.jpg";
 
-const NavigationBar = () => {
+const NavigationBar = ({ setMode }) => {
   return (
     <Navbar
       collapseOnSelect
@@ -23,6 +23,7 @@ const NavigationBar = () => {
               width="140"
               alt="Company Logo"
               className="d-inline-black align-top mx-3"
+              onClick={() => setMode("Home")}
             />
           </Nav.Link>
         </LinkContainer>
@@ -33,13 +34,15 @@ const NavigationBar = () => {
       <Navbar.Collapse className="mx-3">
         <Nav className="ms-auto h4">
           <LinkContainer to="/">
-            <Nav.Link>Home</Nav.Link>
+            <Nav.Link onClick={() => setMode("Home")}>Home</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/aboutUs">
-            <Nav.Link>About Us</Nav.Link>
+            <Nav.Link onClick={() => setMode("About Us")}>About Us</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/contactUs">
-            <Nav.Link>Contact Us</Nav.Link>
+            <Nav.Link onClick={() => setMode("Contact Us")}>
+              Contact Us
+            </Nav.Link>
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>

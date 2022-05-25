@@ -1,21 +1,9 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import DRAGONPIC from "./images/logo.jpg";
 
 // import Button from "react-bootstrap/Button";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Alert,
-  Breadcrumb,
-  Card,
-  Form,
-  Navbar,
-  Nav,
-} from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 import {
   BrowserRouter as Router,
@@ -27,8 +15,13 @@ import { AboutUs } from "./components/AboutUs";
 import { Home } from "./components/Home";
 import { ContactUs } from "./components/ContactUs";
 import { NotFound } from "./components/NotFoundPage";
+import { CompanyJumbotron } from "./components/CompanyJumbotron/JumboIndex";
+import { useState } from "react";
+import { Footer } from "./components/Footer";
+import { UnderConstruction } from "./components/UnderConstruction";
 
 function App() {
+  const [mode, setNewMode] = useState("Home");
   // const [data, setData] = React.useState(null);
 
   // React.useEffect(() => {
@@ -38,16 +31,26 @@ function App() {
   // }, []);
 
   /* .prettierignore */
+
+  const setMode = (newMode) => {
+    setNewMode(newMode);
+  };
+
   return (
     <>
       <Router>
-        <NavigationBar />
-        <Switch>
-          <Route path="/aboutUs" element={<AboutUs />} />
-          <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/" element={<Home />} />
-          <Route element={<NotFound />} />
-        </Switch>
+        <NavigationBar setMode={setMode} />
+        <CompanyJumbotron header={mode} />
+        <Container className="d-flex flex-column min-vh-100 mb-3">
+          <Switch>
+            <Route path="/aboutUs" element={<AboutUs />} />
+            <Route path="/contactUs" element={<ContactUs />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/underConstruction" element={<UnderConstruction />} />
+            <Route element={<NotFound />} />
+          </Switch>
+        </Container>
+        <Footer />
       </Router>
     </>
   );
