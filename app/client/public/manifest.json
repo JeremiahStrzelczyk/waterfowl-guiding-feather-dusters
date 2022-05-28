@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Feather Dusters App",
+  "name": "A full stack web application designed to be used as the main user interface to attract and build a strong client base in hunting. ",
   "icons": [
     {
       "src": "favicon.ico",

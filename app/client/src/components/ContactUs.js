@@ -11,7 +11,6 @@
 import React from "react";
 import { Container, Card, Row, Col } from "react-bootstrap";
 import { CompanyJumbotron } from "./CompanyJumbotron/JumboIndex";
-import { GuideContactInfo } from "./GuideContactInfo";
 
 export const ContactUs = () => {
   return (
@@ -21,6 +20,9 @@ export const ContactUs = () => {
         fluid
         className="text-center d-flex flex-column min-vh-100 mb-3"
       >
+        {/*********************************************
+         * Information regarding the business
+         ****************************************** */}
         <Card className="p-5" bg="dark" text="white">
           <Card text="black" className="p-3 mb-3">
             <Card.Title>
@@ -43,8 +45,10 @@ export const ContactUs = () => {
             </Container>
           </Card>
           <Row>
+            {/********************************************
+             * Zackary's information
+             ***************************************** */}
             <Col>
-              {/* Information for Zack */}
               <Card bg="dark" className="text-left">
                 <Card.Title>
                   <strong>Guide: </strong> Zackary Russell
@@ -55,8 +59,11 @@ export const ContactUs = () => {
                 </Card.Title>
               </Card>
             </Col>
+
             <Col>
-              {/* Information for Dustin */}
+              {/********************************************
+               * Dustin's information
+               ***************************************** */}
               <Card bg="dark" className="text-left">
                 <Card.Title>
                   <strong>Guide: </strong> Dustin Caldwell

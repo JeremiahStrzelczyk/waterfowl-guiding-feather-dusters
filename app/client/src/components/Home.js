@@ -1,3 +1,11 @@
+/********************************************************************************
+ * File: Home.js
+ *
+ * Renders UI elements pertaining to the home page
+ *
+ * Imports images to be used on home page
+ */
+
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import img_01 from "../images/img_01.JPG";

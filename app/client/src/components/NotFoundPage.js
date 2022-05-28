@@ -1,3 +1,9 @@
+/**************************************************************************
+ * File: NotFoundPage.js
+ *
+ * Page used when user enters an abnormal state
+ */
+
 import React from "react";
 import { Container } from "react-bootstrap";
 

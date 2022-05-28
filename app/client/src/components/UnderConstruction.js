@@ -1,3 +1,11 @@
+/*********************************************************************
+ * File UnderConstruction.js
+ *
+ * UI to be used as a placeholder for sections that are either
+ * - Broken and being fixed
+ * - Future implementation
+ */
+
 import React from "react";
 import { Card, Container } from "react-bootstrap";
 import { CompanyJumbotron } from "./CompanyJumbotron/JumboIndex";

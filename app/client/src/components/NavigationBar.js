@@ -1,9 +1,16 @@
+/**********************************************************
+ * File: NavigationBar.js
+ *
+ * Renders a navigation bar that remains at the top of the
+ * screen at all times.
+ *
+ *
+ */
+
 import React from "react";
-import { Navbar, Nav, NavItem, Container } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { Link } from "react-router-dom";
 import companyLogo from "../images/logo.jpg";
-// import companyLogo from "../images/logo-fd.png";
 
 const NavigationBar = () => {
   // const NavigationBar = ({ setMode }) => {
@@ -16,6 +23,9 @@ const NavigationBar = () => {
       sticky="top"
       expand="lg"
     >
+      {/************************************
+       * Company Logo in top left
+       ********************************** */}
       <Navbar.Brand>
         <LinkContainer to="/">
           <Nav.Link>
@@ -32,7 +42,9 @@ const NavigationBar = () => {
       </Navbar.Brand>
       {/* Hamburger Menu */}
       <Navbar.Toggle className="mx-3 h1" />
-      {/* Links */}
+      {/*************************************
+       * List of Links
+       **************************************/}
       <Navbar.Collapse className="mx-3">
         <Nav className="ms-auto h4">
           <LinkContainer to="/">

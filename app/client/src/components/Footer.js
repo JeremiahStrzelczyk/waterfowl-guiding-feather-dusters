@@ -1,16 +1,29 @@
+/*****************************************************************
+ * File: Footer.js
+ *
+ * Component used for rendering "footer"-related information
+ */
+
 import React from "react";
-import { Container } from "react-bootstrap";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
   return (
     <footer className=" bg-dark text-white font-small pt-4 mt-auto ">
+      {/**********************************************************
+       * Upper half of the footer.
+       * - Website, Social media, Website-specific links
+       ********************************************************* */}
       <div className=" container-fluid text-center text-md-left">
         <div className="row">
           <div className="col-md-6 mt-md-0 mt-3">
             <h5 className="text-uppercase">
               Waterfowl guiding feather dusters llc
             </h5>
+
+            {/*********************
+             * Social Media tags
+             ******************* */}
             <div className="container p-4">
               <section className="mb-4">
                 {/* Facebook */}
@@ -33,6 +46,9 @@ export const Footer = () => {
             </div>
           </div>
 
+          {/*************************
+           * Website-specific links
+           *********************** */}
           <hr className="clearfix w-100 d-md-none pb-0" />
 
           {/* Help column */}
@@ -53,6 +69,10 @@ export const Footer = () => {
         </div>
       </div>
 
+      {/**********************************************************
+       * Lower half of the footer
+       * - Copyright information
+       ********************************************************* */}
       <div className="footer-copyright text-center py-3">
         © {new Date().getFullYear()} Copyright: Feather Dusters LLC
       </div>

@@ -1,3 +1,9 @@
+/********************************************************************
+ * File: AboutUs.js
+ *
+ * UI for rendering information about the owners of the website
+ */
+
 import React from "react";
 import { Card, Container } from "react-bootstrap";
 import { CompanyJumbotron } from "./CompanyJumbotron/JumboIndex";
