@@ -22,6 +22,7 @@ const NavigationBar = () => {
       fixed="top"
       sticky="top"
       expand="lg"
+      className="shadow-lg"
     >
       {/************************************
        * Company Logo in top left

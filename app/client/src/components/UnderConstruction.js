@@ -14,12 +14,14 @@ export const UnderConstruction = () => {
   return (
     <div>
       <CompanyJumbotron header={"Under Construction"} />
-      <Container className="d-flex flex-column min-vh-100 pb-50">
-        <Card className="p-5" bg="dark" text="white">
-          <Card.Title>This page is under construction</Card.Title>
-          <Card.Text>Check back soon for more updates!</Card.Text>
-        </Card>
-      </Container>
+      <div className="bg-dark mb-1">
+        <Container className=" text-center d-flex flex-column min-vh-100">
+          <Card className="border-0 p-5" bg="dark" text="white">
+            <Card.Title>This page is under construction</Card.Title>
+            <Card.Text>Check back soon for more updates!</Card.Text>
+          </Card>
+        </Container>
+      </div>
     </div>
   );
 };

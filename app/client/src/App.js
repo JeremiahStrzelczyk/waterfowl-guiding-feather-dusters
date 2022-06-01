@@ -53,7 +53,7 @@ function App() {
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/underConstruction" element={<UnderConstruction />} />
           <Route path="/" element={<Home />} />
-          <Route element={<NotFound />} />
+          <Route path="/notFound" element={<NotFound />} />
         </Switch>
         {/* </Container> */}
         <Footer />

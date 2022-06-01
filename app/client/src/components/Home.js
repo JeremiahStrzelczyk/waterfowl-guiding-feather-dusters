@@ -23,62 +23,59 @@ export const Home = () => {
   return (
     <div>
       <CompanyJumbotron header={"Home"} />
-      <Container
-        fluid
-        className="w-90 text-center d-flex flex-column min-vh-100 mb-3"
-        bg="dark"
-        text="white"
-      >
-        <Card className="p-5" bg="dark" text="white">
-          <Card.Title className="mb-3">
-            Feather Dusters is a waterfowl guide with services based in Grant
-            County and most hunts happening in and around Moses Lake, WA.
-            <br />
-            <br />
-            We strive to give you a fun hunting experience and welcome all
-            eligible hunters.
-          </Card.Title>
-          <Row className="mb-5">
-            <Col>
-              <Card.Img className="m-3" src={img_01} />
-            </Col>
-            <Col>
-              <Card.Img className="m-3" src={img_04} />
-            </Col>
-            <Col>
-              <Card.Img className="m-3" src={img_05} />
-            </Col>
-          </Row>
+      <div className="bg-dark mb-1">
+        <Container className=" text-center d-flex flex-column min-vh-100 ">
+          <Card className="border-0 p-5" bg="dark" text="white">
+            <Card.Title className="mb-3">
+              Feather Dusters is a waterfowl guide with services based in Grant
+              County and most hunts happening in and around Moses Lake, WA.
+              <br />
+              <br />
+              We strive to give you a fun hunting experience and welcome all
+              eligible hunters.
+            </Card.Title>
+            <Row className="mb-5">
+              <Col>
+                <Card.Img className="m-3" src={img_01} />
+              </Col>
+              <Col>
+                <Card.Img className="m-3" src={img_04} />
+              </Col>
+              <Col>
+                <Card.Img className="m-3" src={img_05} />
+              </Col>
+            </Row>
 
-          <Row className="mb-5">
-            <Col>
-              <Card.Img className="m-3" src={img_02} />
-            </Col>
-            <Col>
-              <Card.Img className="m-3" src={img_08} />
-            </Col>
-            <Col>
-              <Card.Img className="m-3" src={img_06} />
-            </Col>
-          </Row>
+            <Row className="mb-5">
+              <Col>
+                <Card.Img className="m-3" src={img_02} />
+              </Col>
+              <Col>
+                <Card.Img className="m-3" src={img_08} />
+              </Col>
+              <Col>
+                <Card.Img className="m-3" src={img_06} />
+              </Col>
+            </Row>
 
-          <Row className="mb-5">
-            <Col>
-              <Card.Img className="m-3" src={img_07} />
-            </Col>
-            <Col>
-              <Card.Img className="m-3" src={img_03} />
-            </Col>
-            <Col>
-              <Card.Img className="m-3" src={img_09} />
-            </Col>
-          </Row>
-          <Card.Title>
-            Thank you for taking the time to view our website. We hope you will
-            all decide to join us out in the field this year.
-          </Card.Title>
-        </Card>
-      </Container>
+            <Row className="mb-5">
+              <Col>
+                <Card.Img className="m-3" src={img_07} />
+              </Col>
+              <Col>
+                <Card.Img className="m-3" src={img_03} />
+              </Col>
+              <Col>
+                <Card.Img className="m-3" src={img_09} />
+              </Col>
+            </Row>
+            <Card.Title>
+              Thank you for taking the time to view our website. We hope you
+              will all decide to join us out in the field this year.
+            </Card.Title>
+          </Card>
+        </Container>
+      </div>
     </div>
   );
 };
