@@ -17,8 +17,10 @@ export const CompanyJumbotron = (props) => {
     <Jumbo>
       <Overlay />
       <Container>
-        <h1 className=" pt-5 ">{props.header}</h1>
-        <p>Waterfowl Guiding</p>
+        <div className="text-white">
+          <h1 className="pt-5 ">{props.header}</h1>
+          <p>Waterfowl Guiding</p>
+        </div>
       </Container>
     </Jumbo>
   );

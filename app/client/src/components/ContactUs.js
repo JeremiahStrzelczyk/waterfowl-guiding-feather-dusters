@@ -16,40 +16,36 @@ export const ContactUs = () => {
   return (
     <>
       <CompanyJumbotron header={"Contact Us"} />
-      <div className="bg-dark mb-1">
+      <div className="bg-dark mb-1 pt-5">
         <Container className="text-center d-flex flex-column min-vh-100 mb-3">
           {/*********************************************
            * Information regarding the business
            ****************************************** */}
-          <Card className="border-0 p-5" bg="dark" text="white">
-            <Card text="black" className="p-3 mb-3">
-              <Card.Title>
-                Please contact us with any questions you may have.
-              </Card.Title>
-              <br />
-              <Card.Title>
-                Questions about pricing? Booking for hunts?
-              </Card.Title>
-              <br />
-              <Card.Title>
-                Call, text, and email us and we will happily answer your
-                questions.
-              </Card.Title>
-              <Container>
-                <Card.Text>
-                  <strong>Email: </strong>{" "}
-                  <a href="mailto:featherdusters01@gmail.com">
-                    featherdusters01@gmail.com
-                  </a>
-                </Card.Text>
-              </Container>
-            </Card>
+          <Card className="shadow-lg border-0 p-5" bg="dark" text="white">
+            <Card.Title>
+              Please contact us with any questions you may have.
+            </Card.Title>
+            <br />
+            <Card.Title>Questions about pricing? Booking for hunts?</Card.Title>
+            <br />
+            <Card.Title>
+              Call, text, and email us and we will happily answer your
+              questions.
+            </Card.Title>
+            <Container className="mb-5">
+              <Card.Text>
+                <strong>Email: </strong>{" "}
+                <a href="mailto:featherdusters01@gmail.com">
+                  featherdusters01@gmail.com
+                </a>
+              </Card.Text>
+            </Container>
             <Row>
               {/********************************************
                * Zackary's information
                ***************************************** */}
               <Col>
-                <Card bg="dark" className="text-left">
+                <Card bg="dark" className="shadow-lg border-0  text-left">
                   <Card.Title>
                     <strong>Guide: </strong> Zackary Russell
                   </Card.Title>
@@ -64,7 +60,7 @@ export const ContactUs = () => {
                 {/********************************************
                  * Dustin's information
                  ***************************************** */}
-                <Card bg="dark" className="text-left">
+                <Card bg="dark" className="shadow-lg border-0 text-left">
                   <Card.Title>
                     <strong>Guide: </strong> Dustin Caldwell
                   </Card.Title>

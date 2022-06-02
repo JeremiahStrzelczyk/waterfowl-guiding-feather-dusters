@@ -25,7 +25,7 @@ export const Home = () => {
       <CompanyJumbotron header={"Home"} />
       <div className="bg-dark mb-1">
         <Container className=" text-center d-flex flex-column min-vh-100 ">
-          <Card className="border-0 p-5" bg="dark" text="white">
+          <Card className="border-0  py-5 " bg="dark" text="white">
             <Card.Title className="mb-3">
               Feather Dusters is a waterfowl guide with services based in Grant
               County and most hunts happening in and around Moses Lake, WA.
@@ -36,37 +36,37 @@ export const Home = () => {
             </Card.Title>
             <Row className="mb-5">
               <Col>
-                <Card.Img className="m-3" src={img_01} />
+                <Card.Img className=" " src={img_01} />
               </Col>
               <Col>
-                <Card.Img className="m-3" src={img_04} />
+                <Card.Img className=" " src={img_04} />
               </Col>
               <Col>
-                <Card.Img className="m-3" src={img_05} />
-              </Col>
-            </Row>
-
-            <Row className="mb-5">
-              <Col>
-                <Card.Img className="m-3" src={img_02} />
-              </Col>
-              <Col>
-                <Card.Img className="m-3" src={img_08} />
-              </Col>
-              <Col>
-                <Card.Img className="m-3" src={img_06} />
+                <Card.Img className=" " src={img_05} />
               </Col>
             </Row>
 
             <Row className="mb-5">
               <Col>
-                <Card.Img className="m-3" src={img_07} />
+                <Card.Img className=" " src={img_02} />
               </Col>
               <Col>
-                <Card.Img className="m-3" src={img_03} />
+                <Card.Img className=" " src={img_08} />
               </Col>
               <Col>
-                <Card.Img className="m-3" src={img_09} />
+                <Card.Img className=" " src={img_06} />
+              </Col>
+            </Row>
+
+            <Row className="mb-5">
+              <Col>
+                <Card.Img className=" " src={img_07} />
+              </Col>
+              <Col>
+                <Card.Img className=" " src={img_03} />
+              </Col>
+              <Col>
+                <Card.Img className=" " src={img_09} />
               </Col>
             </Row>
             <Card.Title>

@@ -8,7 +8,7 @@
  */
 
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import companyLogo from "../images/logo.jpg";
 
@@ -29,15 +29,16 @@ const NavigationBar = () => {
        ********************************** */}
       <Navbar.Brand>
         <LinkContainer to="/">
-          <Nav.Link>
-            <img
+          <Nav.Link className="link-light">
+            <Card.Title>Feather Dusters</Card.Title>
+            {/* <img
               src={companyLogo}
               height="50"
               width="140"
               alt="Company Logo"
               className="d-inline-black align-top mx-3"
               // onClick={() => setMode("Home")}
-            />
+            /> */}
           </Nav.Link>
         </LinkContainer>
       </Navbar.Brand>
