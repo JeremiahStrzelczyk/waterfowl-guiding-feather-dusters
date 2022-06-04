@@ -10,7 +10,6 @@
 import React from "react";
 import { Navbar, Nav, Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import companyLogo from "../images/logo.jpg";
 
 const NavigationBar = () => {
   // const NavigationBar = ({ setMode }) => {

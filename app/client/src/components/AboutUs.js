@@ -7,8 +7,8 @@
 import React from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import { CompanyJumbotron } from "./CompanyJumbotron/JumboIndex";
-import zack from "../images/img_05.JPG";
-import dustin from "../images/img_06-new.JPG";
+import zack from "../images/orig-co-owner.jpg";
+import dustin from "../images/co-owner-02.jpg";
 
 export const AboutUs = () => {
   return (

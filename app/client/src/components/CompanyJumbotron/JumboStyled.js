@@ -1,12 +1,4 @@
 import styled from "styled-components";
-// import img from "../../images/nature-02-cropped.jpg";
-// import img from "../../images/charles-jackson-unsplash-geese-over-water-600x100.jpg";
-// import img from "../../images/charles-jackson-unsplash-geese-over-water-1100x200.jpg";
-// import img from "../../images/charles-jackson-unsplash-geese-over-water-2500x500.jpg";
-import img from "../../images/charles-jackson-unsplash-geese-over-water.jpg";
-// import img from "../../images/charles-jackson-unsplash-geese-over-water-01.png";
-// import img from "../../images/charles-jackson-unsplash-geese-over-water-02.jpg";
-// import img from "../../images/test-00.jpg";
 
 export const Overlay = styled.div`
   background-color: #000;

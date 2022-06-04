@@ -2,6 +2,8 @@
 
 A full stack web application designed to be used as the main user interface to attract and build a strong client base in hunting.
 
+[Project Board](https://github.com/JeremiahStrzelczyk/waterfowl-guiding-feather-dusters/projects/1)
+
 # Dependencies
 
 - [Bootstrap](https://react-bootstrap.github.io/getting-started/introduction): For styling across the website.

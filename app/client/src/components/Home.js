@@ -8,15 +8,15 @@
 
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import img_01 from "../images/img_01.JPG";
-import img_02 from "../images/img_02-new.JPG";
-import img_03 from "../images/img_03-new.JPG";
-import img_04 from "../images/img_04.JPG";
-import img_05 from "../images/img_05.JPG";
-import img_06 from "../images/img_06-new.JPG";
-import img_07 from "../images/img_07-new.jpeg";
-import img_08 from "../images/img_08-new.jpg";
-import img_09 from "../images/img_09-new.jpg";
+import img_07 from "../images/ducks-caught.jpg";
+import img_02 from "../images/hunters.jpg";
+import img_03 from "../images/hunters-02.jpg";
+import img_04 from "../images/hunters-03.jpg";
+import img_05 from "../images/two-guides.jpg";
+import img_06 from "../images/hunters-05.jpg";
+import img_08 from "../images/co-owner.jpg";
+import img_01 from "../images/co-owner-02.jpg";
+import img_09 from "../images/hunters-04.jpg";
 import { CompanyJumbotron } from "./CompanyJumbotron/JumboIndex";
 
 export const Home = () => {
@@ -39,19 +39,19 @@ export const Home = () => {
                 <Card.Img className=" " src={img_01} />
               </Col>
               <Col>
-                <Card.Img className=" " src={img_04} />
+                <Card.Img className=" " src={img_02} />
               </Col>
               <Col>
-                <Card.Img className=" " src={img_05} />
+                <Card.Img className=" " src={img_03} />
               </Col>
             </Row>
 
             <Row className="mb-5">
               <Col>
-                <Card.Img className=" " src={img_02} />
+                <Card.Img className=" " src={img_04} />
               </Col>
               <Col>
-                <Card.Img className=" " src={img_08} />
+                <Card.Img className=" " src={img_05} />
               </Col>
               <Col>
                 <Card.Img className=" " src={img_06} />
@@ -63,7 +63,7 @@ export const Home = () => {
                 <Card.Img className=" " src={img_07} />
               </Col>
               <Col>
-                <Card.Img className=" " src={img_03} />
+                <Card.Img className=" " src={img_08} />
               </Col>
               <Col>
                 <Card.Img className=" " src={img_09} />
