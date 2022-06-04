@@ -14,6 +14,7 @@ import { CompanyJumbotron } from "./CompanyJumbotron/JumboIndex";
 
 export const ContactUs = () => {
   return (
+    /* Renders a banner with the title of the current page */
     <>
       <CompanyJumbotron header={"Contact Us"} />
       <div className="bg-dark mb-1 pt-5">

@@ -12,6 +12,7 @@ import dustin from "../images/co-owner-02.jpg";
 
 export const AboutUs = () => {
   return (
+    /* Renders a banner with the title of the current page */
     <>
       <CompanyJumbotron header={"About Us"} />
       <div className="bg-dark mb-1 ">
