@@ -8,15 +8,15 @@
 
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import img_01 from "../images/co-owner-02.jpg";
+// import img_01 from "../images/co-owner-02.jpg";
 import img_02 from "../images/hunters.jpg";
 import img_03 from "../images/hunters-02.jpg";
 import img_04 from "../images/hunters-03.jpg";
 import img_05 from "../images/two-guides.jpg";
 import img_06 from "../images/hunters-05.jpg";
 import img_07 from "../images/ducks-caught.jpg";
-import img_08 from "../images/co-owner.jpg";
-import img_09 from "../images/hunters-04.jpg";
+// import img_08 from "../images/co-owner.jpg";
+// import img_09 from "../images/hunters-04.jpg";
 import { CompanyJumbotron } from "./CompanyJumbotron/JumboIndex";
 
 export const Home = () => {
@@ -37,7 +37,7 @@ export const Home = () => {
             </Card.Title>
             <Row className="mb-5">
               <Col>
-                <Card.Img alt="Man with duck" src={img_01} />
+                <Card.Img alt="Pile of ducks" src={img_07} />
               </Col>
               <Col>
                 <Card.Img alt="Hunters and their catch" src={img_02} />
@@ -65,17 +65,6 @@ export const Home = () => {
               </Col>
             </Row>
 
-            <Row className="mb-5">
-              <Col>
-                <Card.Img alt="Pile of ducks" src={img_07} />
-              </Col>
-              <Col>
-                <Card.Img alt="Co-Owner with duck call" src={img_08} />
-              </Col>
-              <Col>
-                <Card.Img alt="Ducks in back of truck" src={img_09} />
-              </Col>
-            </Row>
             <Card.Title>
               Thank you for taking the time to view our website. We hope you
               will all decide to join us out in the field this year.

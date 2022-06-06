@@ -16,7 +16,9 @@ export const Footer = () => {
        ********************************************************* */}
       <div className=" container-fluid text-center text-md-left">
         <div className="row">
-          <div className="col-md-6 mt-md-0 mt-3">
+          {/* This was commented out until we add site links to footer  */}
+          {/* <div className="col-md-6 mt-md-0 mt-3"> */}
+          <div className=" mt-md-0 mt-3">
             <h5 className="text-uppercase">
               Waterfowl guiding feather dusters llc
             </h5>
@@ -29,18 +31,12 @@ export const Footer = () => {
                 {/* Facebook */}
                 <a
                   className="btn btn-outline-light btn-floating m-1 h3"
-                  href="/underConstruction"
+                  href="https://www.facebook.com/featherdustersLLC/"
                   role="button"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FaFacebook size={50} />
-                </a>
-                {/* Instagram */}
-                <a
-                  className="btn btn-outline-light btn-floating  m-1"
-                  href="/underConstruction"
-                  role="button"
-                >
-                  <FaInstagram size={50} />
                 </a>
               </section>
             </div>
