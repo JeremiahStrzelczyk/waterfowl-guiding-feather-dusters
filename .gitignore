@@ -2,6 +2,8 @@
 
 .env
 
+**/zzClipboard**
+
 # dependencies
 /node_modules
 /app/client/node_modules

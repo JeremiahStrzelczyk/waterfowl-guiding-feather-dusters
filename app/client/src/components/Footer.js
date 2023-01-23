@@ -1,77 +1,25 @@
-/*****************************************************************
- * File: Footer.js
- *
- * Component used for rendering "footer"-related information
- */
-
 import React from "react";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
 
-export const Footer = () => {
+const Footer = () => {
   return (
-    <footer className=" bg-dark text-white font-small pt-4 mt-auto ">
-      {/**********************************************************
-       * Upper half of the footer.
-       * - Website, Social media, Website-specific links
-       ********************************************************* */}
-      <div className=" container-fluid text-center text-md-left">
-        <div className="row">
-          {/* This was commented out until we add site links to footer  */}
-          {/* <div className="col-md-6 mt-md-0 mt-3"> */}
-          <div className=" mt-md-0 mt-3">
-            <h5 className="text-uppercase">
-              Waterfowl guiding feather dusters llc
-            </h5>
+    <footer className="footer">
+      {/* <p className="nowrap">
+        FEATHER DUSTERS LLC{" "}
+        <span className="nowrap"> WATERFOWL GUIDING &copy;</span>
+      </p> */}
+      {/* <p>Featherdusters LLC Waterfowl Guiding &copy;</p> */}
 
-            {/*********************
-             * Social Media tags
-             ******************* */}
-            <div className="container p-4">
-              <section className="mb-4">
-                {/* Facebook */}
-                <a
-                  className="btn btn-outline-light btn-floating m-1 h3"
-                  href="https://www.facebook.com/featherdustersLLC/"
-                  role="button"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebook size={50} />
-                </a>
-              </section>
-            </div>
-          </div>
+      {/* <p>
+        Featherdusters LLC{" "}
+        <span className="no-flex-wrap">Waterfowl Guiding &copy;</span>
+      </p> */}
 
-          {/*************************
-           * Website-specific links
-           *********************** */}
-          <hr className="clearfix w-100 d-md-none pb-0" />
+      <p className="nowrap">Featherdusters LLC Waterfowl Guiding &copy;</p>
 
-          {/* Help column */}
-          {/* <div className="col-md-3 mb-md-0 mb-3">
-            <h4 className="text-uppercase">Help</h4>
-            <ul className="list-unstyled">
-              <li>
-                <a href="/underConstruction">Support</a>
-              </li>
-              <li>
-                <a href="/underConstruction">FAQ</a>
-              </li>
-              <li>
-                <a href="/underConstruction">Bug Reporting</a>
-              </li>
-            </ul>
-          </div> */}
-        </div>
-      </div>
-
-      {/**********************************************************
-       * Lower half of the footer
-       * - Copyright information
-       ********************************************************* */}
-      <div className="footer-copyright text-center py-3">
-        © {new Date().getFullYear()} Copyright: Feather Dusters LLC
-      </div>
+      <p>Facebook</p>
+      <p>&copy; {new Date().getFullYear()} Copyright: Feather Dusters LLC</p>
     </footer>
   );
 };
+
+export default Footer;
