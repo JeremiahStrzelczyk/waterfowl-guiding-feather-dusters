@@ -2,7 +2,7 @@
 
 .env
 
-**Clipboard/**
+**/Clipboard/**
 
 # dependencies
 /node_modules
