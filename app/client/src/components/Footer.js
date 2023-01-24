@@ -1,5 +1,7 @@
 import React from "react";
 
+import { FaFacebookSquare } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -14,10 +16,10 @@ const Footer = () => {
         <span className="no-flex-wrap">Waterfowl Guiding &copy;</span>
       </p> */}
 
-      <p className="nowrap">Featherdusters LLC Waterfowl Guiding &copy;</p>
+      <p className="nowrap">Featherdusters LLC</p>
 
-      <p>Facebook</p>
-      <p>&copy; {new Date().getFullYear()} Copyright: Feather Dusters LLC</p>
+      <FaFacebookSquare className="footer__social-media-icon" />
+      <p>&copy; {new Date().getFullYear()} Feather Dusters LLC</p>
     </footer>
   );
 };

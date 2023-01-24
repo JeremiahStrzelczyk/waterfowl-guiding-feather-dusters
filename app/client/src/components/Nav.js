@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { faX, faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaTimes, FaBars } from "react-icons/fa";
 import { useState } from "react";
 
 import useScrollBlock from "../hooks/useScrollBlock";
@@ -36,11 +35,7 @@ const Nav = () => {
            * Menu Toggle
            **************************************************/}
           <div className="nav-container__toggle" onClick={() => handleToggle()}>
-            {isOpen ? (
-              <FontAwesomeIcon icon={faX} />
-            ) : (
-              <FontAwesomeIcon icon={faBars} />
-            )}
+            {isOpen ? <FaTimes /> : <FaBars />}
           </div>
 
           {/******************************************************
@@ -48,7 +43,9 @@ const Nav = () => {
            ***************************************************** */}
           <ul
             className={
-              isOpen ? "nav-container__menu active" : "nav-container__menu "
+              isOpen
+                ? "nav-container__menu nav-container__menu--active"
+                : "nav-container__menu "
             }
             onClick={() => resetNav()}
           >
