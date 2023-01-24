@@ -1,53 +1,68 @@
-import { useRef } from "react";
-
-const safeDocument = typeof document !== "undefined" ? document : {};
-
 /**
- * Usage:
- * const [blockScroll, allowScroll] = useScrollBlock();
+ * Credit: Luke Denton
+ *
+ * https://github.com/denno020/useScrollLock
  */
-const useScrollBlock = () => {
-  const scrollBlocked = useRef();
-  const html = safeDocument.documentElement;
-  const { body } = safeDocument;
 
-  const blockScroll = () => {
-    if (!body || !body.style || scrollBlocked.current) return;
+import React from "react";
 
-    const scrollBarWidth = window.innerWidth - html.clientWidth;
-    const bodyPaddingRight =
-      parseInt(
-        window.getComputedStyle(body).getPropertyValue("padding-right")
-      ) || 0;
+function isiOS() {
+  return (
+    [
+      "iPad Simulator",
+      "iPhone Simulator",
+      "iPod Simulator",
+      "iPad",
+      "iPhone",
+      "iPod",
+    ].includes(navigator.platform) ||
+    // iPad on iOS 13 detection
+    (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+  );
+}
 
-    /**
-     * 1. Fixes a bug in iOS and desktop Safari whereby setting
-     *    `overflow: hidden` on the html/body does not prevent scrolling.
-     * 2. Fixes a bug in desktop Safari where `overflowY` does not prevent
-     *    scroll if an `overflow-x` style is also applied to the body.
-     */
-    html.style.position = "relative"; /* [1] */
-    html.style.overflow = "hidden"; /* [2] */
-    body.style.position = "relative"; /* [1] */
-    body.style.overflow = "hidden"; /* [2] */
-    body.style.paddingRight = `${bodyPaddingRight + scrollBarWidth}px`;
+const useScrollLock = () => {
+  const scrollOffset = React.useRef(0);
 
-    scrollBlocked.current = true;
+  const lockScroll = React.useCallback(() => {
+    document.body.dataset.scrollLock = "true";
+    document.body.style.overflow = "hidden";
+    document.body.style.paddingRight = "var(--scrollbar-compensation)";
+
+    if (isiOS) {
+      scrollOffset.current = window.pageYOffset;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollOffset.current}px`;
+      document.body.style.width = "100%";
+    }
+  }, []);
+
+  const unlockScroll = React.useCallback(() => {
+    document.body.style.overflow = "";
+    document.body.style.paddingRight = "";
+
+    if (isiOS) {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollOffset.current);
+    }
+
+    delete document.body.dataset.scrollLock;
+  }, []);
+
+  React.useLayoutEffect(() => {
+    const scrollBarCompensation = window.innerWidth - document.body.offsetWidth;
+    document.body.style.setProperty(
+      "--scrollbar-compensation",
+      `${scrollBarCompensation}px`
+    );
+  }, []);
+
+  return {
+    lockScroll,
+    unlockScroll,
   };
-
-  const allowScroll = () => {
-    if (!body || !body.style || !scrollBlocked.current) return;
-
-    html.style.position = "";
-    html.style.overflow = "";
-    body.style.position = "";
-    body.style.overflow = "";
-    body.style.paddingRight = "";
-
-    scrollBlocked.current = false;
-  };
-
-  return [blockScroll, allowScroll];
 };
 
-export default useScrollBlock;
+export default useScrollLock;
