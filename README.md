@@ -10,12 +10,9 @@ A full stack web application designed to be used as the main user interface to a
 
 # Dependencies
 
-- [Bootstrap](https://react-bootstrap.github.io/getting-started/introduction): For styling across the website.
-- [Express backend](https://expressjs.com/): Framework used to wrap HTTP requests and responses.
-- [React Router](https://v5.reactrouter.com/web/guides/quick-start): Used to navigate across the website.
-- [React Router Bootstrap](https://www.npmjs.com/package/react-router-bootstrap): Used to wrap 'BrowserRouter' `Link`s around Bootstrap styled navigation links
-- [Styled Components](https://styled-components.com/)
-- [React Icons](https://react-icons.github.io/react-icons/)
+# Credit
+
+Credit [useScrollBlock](https://gist.github.com/reecelucas/2f510e6b8504008deaaa52732202d2da) if we end up using it in the project
 
 ```
 npm i react-bootstrap bootstrap

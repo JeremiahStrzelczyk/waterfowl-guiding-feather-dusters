@@ -44,6 +44,7 @@ textarea {
   --bgcolor: white;
   --bgcolor-secondary: black;
   --color-primary: black;
+  --color-contrast: orange;
 
   --cta-bgcolor: orange;
   --cta-color-primary: black;
@@ -137,15 +138,15 @@ p {
   line-height: 1.5;
 }
 
-a:any-link {
+/* a:any-link {
   color: var(--link-color);
   cursor: pointer;
-}
+} */
 
-a:hover,
+/* a:hover,
 a:focus-visible {
   color: var(--link-hover);
-}
+} */
 
 a:active {
   color: var(--link-active);
@@ -169,80 +170,155 @@ a:active {
 /*****************************
  * || Nav
  ****************************/
+
 .nav {
+  background: var(--nav-bg-color);
+  min-height: var(--nav-height-min);
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* font-size: 1.2rem; */
   position: sticky;
   top: 0;
-  z-index: 1;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--padding-tb) var(--padding-side);
-  background-color: var(--nav-bg-color);
-  color: var(--nav-color);
+  z-index: 999;
+}
 
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Push nav elements as far apart as possible */
   min-height: var(--nav-height-min);
 }
-.nav__wrapper--ul--mobile {
-  display: none;
-}
-.nav__wrapper--ul {
-  position: fixed;
 
-  text-align: center;
-  line-height: 4rem;
-  align-content: center;
-  justify-content: center;
-  list-style: none;
-  top: calc(var(--nav-height-min));
-  left: 0;
-  background-color: black;
-  color: white;
-  width: 100vw;
-
-  padding: 3rem var(--padding-side);
+.nav-wrapper {
+  z-index: 1;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: var(--padding-side);
 }
 
-.nav__wrapper--ul a {
-  text-decoration: none;
-}
-
-nav[data-overlay="true"]::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-
-  background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
-}
-.nav__button {
-  border: 0;
-  background-color: transparent;
+.nav-container__logo {
   color: var(--nav-color);
-  font-size: calc(var(--fs) * 1.3);
-
-  display: block;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
-
-/* Put a line above each mobile link */
-/* and below the last mobile link  */
-li {
-  border-top: var(--nav-mobile-menu-border);
-}
-li:last-child {
-  border-bottom: var(--nav-mobile-menu-border);
-}
-
-/* Makes the entire span clickable, rather than just the text */
-li a {
-  display: block;
-}
-
-.nav__button:hover {
   cursor: pointer;
-  font-size: calc(var(--fs) * 1.5);
+  text-decoration: none; /* Removes underline */
+  display: flex;
+  align-items: center;
 }
+
+.nav-container__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none; /* No bullets */
+  /* text-align: center; */
+  /* justify-content: flex-end; */
+}
+
+/* .nav-container__item {
+  min-height: var(--nav-height-min);
+} */
+
+/* Puts a line under the nav element when */
+/* hovering over it */
+.nav-container__item:hover {
+  border-bottom: 2px solid var(--color-contrast);
+}
+
+.nav-container__link {
+  color: var(--nav-color);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  /* height: 100%; */
+}
+
+/* Color the nav link of the page we're on */
+.active {
+  color: var(--color-contrast);
+}
+
+/* Don't display the toggle by default */
+.nav-container__toggle {
+  display: none;
+  color: var(--nav-color);
+}
+
+@media screen and (max-width: 576px) {
+  /* We want the menu to "open" by sliding in 
+     from the left. 
+     We set the menu so that it is off the UI
+     in that direction 
+  */
+  .nav-container__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: var(--nav-height-min);
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  /* Sliding animation. 
+     The menu slides into place with `left:0` 
+  */
+  .nav-container__menu.active {
+    background-color: var(--nav-bg-color);
+    left: 0;
+    opacity: 1;
+    transition: all 0.6s ease;
+    z-index: 1;
+  }
+
+  /* Makes the entire block of each nav link from the 
+     mobile nav hoverable/clickable */
+  .nav-container__link {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  /* Increases each nav link (mobile mode) when hovered */
+  .nav-container__link:hover {
+    color: var(--color-contrast);
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+  }
+
+  /* Removes the bottom border we have in place for the 
+     desktop version of the nav bar */
+  .nav-container__item:hover {
+    border: none;
+  }
+
+  .nav-container__item {
+    width: 100%;
+  }
+
+  .nav-container__toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  /* Puts a gradient behind the nav when in mobile and the nav is open */
+  nav[data-overlay="true"]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.8));
+  }
+}
+
 /*****************************
  * || Collage
  ****************************/

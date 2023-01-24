@@ -1,53 +1,83 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { faX, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
+import useScrollBlock from "../hooks/useScrollBlock";
+
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const button = (
-    <button
-      className="nav__button"
-      aria-controls="primary-navigation"
-      aria-expanded={isOpen ? true : false}
-      onClick={() => setIsOpen(!isOpen)}
-    >
-      {isOpen ? (
-        <FontAwesomeIcon icon={faX} />
-      ) : (
-        <FontAwesomeIcon icon={faBars} />
-      )}
+  const [blockScroll, allowScroll] = useScrollBlock();
 
-      <span className="offscreen">Menu</span>
-    </button>
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+    // isOpen ? allowScroll() : blockScroll();
+  };
+
+  const resetNav = () => {
+    // allowScroll();
+    setIsOpen(false);
+  };
+
+  return (
+    <>
+      <nav className="nav" data-overlay={isOpen}>
+        <div className="nav-container nav-wrapper">
+          <Link
+            to="/"
+            className="nav-container__logo"
+            onClick={() => resetNav()}
+          >
+            Featherdusters
+          </Link>
+
+          {/***************************************************
+           * Menu Toggle
+           **************************************************/}
+          <div className="nav-container__toggle" onClick={() => handleToggle()}>
+            {isOpen ? (
+              <FontAwesomeIcon icon={faX} />
+            ) : (
+              <FontAwesomeIcon icon={faBars} />
+            )}
+          </div>
+
+          {/******************************************************
+           * Nav List
+           ***************************************************** */}
+          <ul
+            className={
+              isOpen ? "nav-container__menu active" : "nav-container__menu "
+            }
+            onClick={() => resetNav()}
+          >
+            {/* */}
+            {/*** HOME ***/}
+            <li className="nav-container__item">
+              <NavLink to="/" className="nav-container__link">
+                Home
+              </NavLink>
+            </li>
+
+            {/*** ABOUT ***/}
+            <li className="nav-container__item">
+              <NavLink to="/about" className="nav-container__link">
+                About
+              </NavLink>
+            </li>
+
+            {/*** CONTACT ***/}
+            <li className="nav-container__item">
+              <NavLink to="/contact" className="nav-container__link">
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </>
   );
-  const content = (
-    <nav className="nav" data-overlay={isOpen}>
-      {/* // <nav className={`nav ${isOpen ? "data-overlay" : ""}`}> */}
-      <div className="nav__title">Featherdusters</div>
-
-      <div className="nav__wrapper">
-        <ul
-          className={isOpen ? "nav__wrapper--ul" : "nav__wrapper--ul--mobile"}
-          onClick={() => setIsOpen(false)}
-        >
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </div>
-      {button}
-    </nav>
-  );
-
-  return content;
 };
 
 export default Nav;
