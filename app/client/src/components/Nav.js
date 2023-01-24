@@ -2,20 +2,21 @@ import { Link, NavLink } from "react-router-dom";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { useState } from "react";
 
-import useScrollBlock from "../hooks/useScrollBlock";
+// import useScrollBlock from "../hooks/useScrollBlock";
+import useScrollLock from "../hooks/useScrollBlock";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const [blockScroll, allowScroll] = useScrollBlock();
+  const { lockScroll, unlockScroll } = useScrollLock();
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
-    // isOpen ? allowScroll() : blockScroll();
+    isOpen ? unlockScroll() : lockScroll();
   };
 
   const resetNav = () => {
-    // allowScroll();
+    unlockScroll();
     setIsOpen(false);
   };
 
