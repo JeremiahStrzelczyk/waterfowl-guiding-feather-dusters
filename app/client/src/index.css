@@ -13,6 +13,7 @@
 
 img {
   display: block; /* removes gap since imgs are inline by default */
+  border-radius: var(--border-radius);
 
   /* Img responsiveness */
   max-width: 100%; /* of parent */
@@ -41,27 +42,32 @@ textarea {
   --fs-hamburger-icon: 1.8rem;
 
   /* COLORS */
-  --bgcolor: white;
-  --bgcolor-secondary: black;
-  --color-primary: black;
-  --color-contrast: orange;
+  --clr-dark-primary: black;
+  --clr-light-primary: white;
+  --clr-accent: orange;
 
-  --cta-bgcolor: orange;
-  --cta-color-primary: black;
+  --bgcolor: var(--clr-light-primary);
+  --bgcolor-secondary: var(--clr-dark-primary);
+  --color-primary: var(--clr-dark-primary);
+  --color-contrast: var(--clr-accent);
 
-  --nav-bg-color: black;
-  --nav-color: white;
+  --cta-bgcolor: var(--clr-accent);
+  --cta-color-primary: var(--clr-dark-primary);
+
+  --nav-bg-color: var(--clr-dark-primary);
+  --nav-color: var(--clr-light-primary);
   --nav-clr-accent: rgba(255, 255, 255, 0.699);
   --nav-height-min: calc(0.1 * 100vh);
   --nav-mobile-menu-border: 1px solid rgba(245, 245, 245, 0.2);
 
-  --border-color: #333;
-  --link-color: white;
+  --border-color: var(--clr-dark-primary);
+  --link-color: var(--clr-light-primary);
   --link-hover: hsla(0, 0%, 100%, 0.774);
-  --link-active: orange;
+  --link-active: var(--clr-accent);
 
   /* BORDERS */
   --borders: 1px solid var(--border-color);
+  --border-radius: 0.25rem;
 
   /* STANDARD PADDING */
   --padding-tb: 0.25em;
@@ -385,7 +391,8 @@ a:active {
 
 .cta {
   margin: var(--margin);
-  background-color: var(--cta-bgcolor);
+  background-color: var(--color-contrast);
+  border-radius: var(--border-radius);
   color: var(--cta-color-primary);
   display: flex;
   flex-direction: column;
