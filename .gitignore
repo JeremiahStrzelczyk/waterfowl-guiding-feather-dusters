@@ -2,7 +2,7 @@
 
 .env
 
-**/zz**
+**Clipboard/**
 
 # dependencies
 /node_modules
