@@ -76,6 +76,7 @@ textarea {
   --padding-tb: 0.25em;
   /* --padding-side: 5%; */
   --padding-side: 2.5%;
+  --padding-content-lr: 2.5%;
   --footer-padding-tb: calc(var(--padding-tb) * 4);
 
   /* STANDARD MARGIN */
@@ -133,8 +134,6 @@ a:focus-visible {
 .black-section {
   background-color: var(--bgcolor-secondary);
   width: 100vw;
-  display: flex;
-  justify-content: center;
 }
 
 /*******************************************************************
@@ -169,6 +168,9 @@ h3 {
 
 p {
   line-height: 1.5;
+  text-align: center;
+
+  padding: var(--padding-tb) 13%;
 }
 
 /* a:any-link {
@@ -359,10 +361,14 @@ a:active {
  ****************************/
 
 .collage__container {
-  width: 80%; /* Chosen to match the side margins of the rest of the page */
+  /* Center itself within the black section */
+  margin: auto;
+  width: 65%;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 1rem 0;
+
   gap: 1rem;
 }
 
