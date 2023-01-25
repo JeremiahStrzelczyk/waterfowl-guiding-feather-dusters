@@ -2,6 +2,9 @@
  * Credit: Luke Denton
  *
  * https://github.com/denno020/useScrollLock
+ *
+ * This hook aims to prevent the user from being able to scroll
+ * while the mobile navigation is open
  */
 
 import React from "react";
