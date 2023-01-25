@@ -19,7 +19,7 @@ const Home = () => {
       {/***********************************
        * IMAGES
        ******************************** */}
-      <article className="main__article">
+      <article className="main__article" aria-label="Collage of duck hunters">
         <Collage />
       </article>
       {/***********************************

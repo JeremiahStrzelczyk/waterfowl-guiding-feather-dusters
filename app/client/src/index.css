@@ -36,7 +36,7 @@ textarea {
   --ff-headings: "Fugaz One";
 
   /* Grows and shrinks font size with a min and max */
-  --fs: clamp(1rem, 2.5vw, 2rem); /* <smallest> <growth> <largest> */
+  --fs: clamp(1rem, 2.5vw, 1.25rem); /* <smallest> <growth> <largest> */
 
   /* HAMBURGER MENU */
   --fs-hamburger-icon: 1.8rem;
@@ -58,7 +58,10 @@ textarea {
   --nav-color: var(--clr-light-primary);
   --nav-clr-accent: rgba(255, 255, 255, 0.699);
   --nav-height-min: calc(0.1 * 100vh);
+  /* --nav-height-min: clamp(calc(0.05 * 100vh), 2px, calc(0.1 * 100vh)) */
   --nav-mobile-menu-border: 1px solid rgba(245, 245, 245, 0.2);
+
+  --footer-height-min: 200px;
 
   --border-color: var(--clr-dark-primary);
   --link-color: var(--clr-light-primary);
@@ -71,7 +74,9 @@ textarea {
 
   /* STANDARD PADDING */
   --padding-tb: 0.25em;
+  /* --padding-side: 5%; */
   --padding-side: 2.5%;
+  --footer-padding-tb: calc(var(--padding-tb) * 4);
 
   /* STANDARD MARGIN */
   --margin: clamp(1em, 2.5vw, 5rem) 0;
@@ -102,6 +107,26 @@ textarea {
   display: none;
 }
 
+/* a:any-link {
+  color: var(--link-color);
+  cursor: pointer;
+} */
+
+/* a:hover,
+a:focus-visible {
+  color: var(--link-hover);
+} */
+
+.link {
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--link-hover);
+}
+
 /* Creates a black background that spans the entire view width. */
 /* Centers the content that is with it */
 /* For example, the collage uses this BG */
@@ -119,19 +144,21 @@ html {
   font-size: var(--fs);
   font-family: var(--ff);
   background-color: var(--bgcolor);
+  background-color: var(--bgcolor);
 }
 body {
   min-height: 100vh;
   color: var(--color-primary);
+
   margin: 0 auto; /* centers left and right */
 }
 
 /* React root div */
-#root {
+/* #root {
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-}
+} */
 
 h1,
 h2,
@@ -183,6 +210,8 @@ a:active {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  box-shadow: 0 0 10px var(--nav-bg-color);
 
   /* font-size: 1.2rem; */
   position: sticky;
@@ -330,14 +359,14 @@ a:active {
  ****************************/
 
 .collage__container {
-  width: 94%; /* Chosen to match the side margins of the rest of the page */
+  width: 80%; /* Chosen to match the side margins of the rest of the page */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 1rem 0;
   gap: 1rem;
 }
 
-/* Shows a 2x3 grid of images on screens 576+ */
+/* Images are rearranged as a 2x3 grid on screens 576+ */
 @media screen and (min-width: 576px) {
   .collage__container {
     grid-template-columns: repeat(3, 1fr);
@@ -348,6 +377,50 @@ a:active {
  * || Footer
  *************************/
 .footer {
+  background-color: var(--nav-bg-color);
+  color: var(--nav-color);
+  /* padding: var(--padding-tb) var(--padding-side); */
+  /* padding: max(calc(var(--padding-tb) * 2), 10px) var(--padding-side); */
+  padding: var(--footer-padding-tb) var(--padding-side);
+  /* padding: 30px 30px; */
+  /* min-height: var(--nav-height-min); */
+  min-height: var(--footer-height-min);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__social-media-wrapper {
+  text-align: center;
+}
+
+.footer__social-media-icon {
+  /* width: 40px; */
+  width: calc(var(--fs) * 2);
+  height: auto;
+}
+
+.footer__hr {
+  border: none;
+  /* height: clamp(0.04rem, 0.004rem, 0.004rem); */
+
+  height: 0.004rem;
+
+  background-color: grey;
+  width: 100%;
+}
+
+.footer__copyright {
+  font-size: 0.4rem; /* <smallest> <growth> <largest> */
+}
+
+@media screen and (min-width: 576px) {
+  .footer {
+    /* min-height: calc(var(--nav-height-min) * 3); */
+    min-height: var(--footer-height-min);
+  }
 }
 
 /*******************

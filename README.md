@@ -21,4 +21,4 @@ A single-page web application designed to be used as the main landing page to at
 
 # Credit
 
-Credit [useScrollBlock](https://gist.github.com/reecelucas/2f510e6b8504008deaaa52732202d2da) if we end up using it in the project
+This application makes use of a 3rd party Hook by Luke Denton [useScrollLock](https://github.com/denno020/useScrollLock). This hook aims to disable the ability for the user to scroll when the mobile menu is open.
