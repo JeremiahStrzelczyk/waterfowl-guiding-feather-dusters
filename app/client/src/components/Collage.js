@@ -8,10 +8,7 @@ import hunters5 from "../images/hunters-05.jpg";
 const Collage = () => {
   return (
     <section className="black-section">
-      <div
-        aria-label="A collage of images taken with our clients while out on guides"
-        className="collage__container"
-      >
+      <div className="collage__container">
         <figure>
           <a href={hunters} download="featherdusters01">
             <img

@@ -76,7 +76,8 @@ textarea {
   --padding-tb: 0.25em;
   /* --padding-side: 5%; */
   --padding-side: 2.5%;
-  --padding-content-lr: 2.5%;
+  --padding-side-main: 15%;
+  --padding-content-lr: 10%;
   --footer-padding-tb: calc(var(--padding-tb) * 4);
 
   /* STANDARD MARGIN */
@@ -128,12 +129,37 @@ a:focus-visible {
   color: var(--link-hover);
 }
 
+.even-columns {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr 2fr;
+  gap: 1rem;
+
+  align-items: center;
+  justify-items: center;
+
+  padding: var(--padding-tb) var(--padding-side);
+}
+
+.even-columns--inverse {
+  grid-auto-columns: 2fr 1fr;
+}
+
+.inverse-bg {
+  background-color: var(--bgcolor-secondary);
+  color: var(--clr-light-primary);
+}
+
 /* Creates a black background that spans the entire view width. */
 /* Centers the content that is with it */
 /* For example, the collage uses this BG */
 .black-section {
   background-color: var(--bgcolor-secondary);
   width: 100vw;
+}
+
+.border {
+  border: 3px solid red;
 }
 
 /*******************************************************************
@@ -170,7 +196,7 @@ p {
   line-height: 1.5;
   text-align: center;
 
-  padding: var(--padding-tb) 13%;
+  padding: var(--padding-tb) var(--padding-side);
 }
 
 /* a:any-link {
@@ -191,15 +217,40 @@ a:active {
 * || MAIN
 *******************************************************************/
 .main {
-  padding: var(--padding-tb) var(--padding-side);
+  padding: var(--padding-tb) var(--padding-side-main);
+  /* padding: var(--padding-tb) var(--padding-side); */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.main__article {
-  margin: var(--margin);
+.main__section--dark-bg {
+  /* Inverse color and background */
+  background-color: var(--bgcolor-secondary);
+  color: var(--clr-light-primary);
+
+  /* Ensure the dark background spans the entire width */
+  width: 100vw;
+}
+
+/* The dark background sections use a width=100vw so that the color
+   extends to the ends of the screen. The purpose was to have alternating
+   dark and light backgrounds. 
+   There were problems with getting the padding correct, so this was the
+   hacky solution */
+.main__section--dark-bg > div:first-child {
+  padding: var(--padding-tb)
+    calc(var(--padding-side-main) + var(--padding-side));
+}
+
+.left-align {
+  text-align: left;
+}
+
+.no-side-padding {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /*****************************
@@ -232,7 +283,7 @@ a:active {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding: var(--padding-side);
+  padding: var(--padding-tb) var(--padding-side);
 }
 
 .nav-container__logo {
@@ -449,4 +500,11 @@ a:active {
 .button:hover,
 .button:focus-visible {
   background-color: #333;
+}
+
+/**********************
+ * || About
+ *********************/
+.about__guide-wrapper {
+  padding: var(--padding-tb) var(--padding-side);
 }
