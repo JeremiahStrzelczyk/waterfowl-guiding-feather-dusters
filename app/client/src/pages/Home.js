@@ -4,7 +4,7 @@ import Collage from "../components/Collage";
 
 const Home = () => {
   return (
-    <main className="main">
+    <main>
       {/***********************************
        * INTRODUCTION
        ******************************** */}
@@ -19,9 +19,8 @@ const Home = () => {
       {/***********************************
        * IMAGES
        ******************************** */}
-      <section aria-label="A collage of images taken with our clients while out on guides">
-        <Collage />
-      </section>
+
+      <Collage />
       {/***********************************
        * OUTRO
        ******************************** */}

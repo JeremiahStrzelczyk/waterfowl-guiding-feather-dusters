@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <main className="main">
+    <main>
       <article className="main__article">
         <section aria-label="Email Us" className="main__section">
           <p>Please contact us with any questions you may have.</p>
@@ -18,7 +18,7 @@ const ContactUs = () => {
           </p>
         </section>
         <section
-          className="main__section even-columns"
+          className="even-columns"
           aria-label="Phone numbers for Co-Owners"
         >
           <div>

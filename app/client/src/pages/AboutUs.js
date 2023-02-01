@@ -4,81 +4,75 @@ import CallToAction from "../components/CallToAction";
 
 const AboutUs = () => {
   return (
-    <main className="main">
-      <section className="main__section">
+    <main>
+      <section>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
-          incidunt vero dicta nam culpa, cupiditate adipisci eaque earum
-          voluptatibus dolorum quo explicabo ad, maiores consectetur molestiae
-          inventore distinctio optio dolorem?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque libero,
+          voluptatem consectetur reprehenderit reiciendis error sunt, quia animi
+          quam earum dolores aperiam dignissimos ullam unde laborum itaque ea
+          deleniti sequi.
         </p>
       </section>
       {/*********************************
        * Zach's About Section
        *********************************/}
-      <section className="main__section--dark-bg">
-        <div className="even-columns even-columns--inverse">
-          <div>
-            <p>Zackary Russell</p>
-            <p>Co-Owner and Guide</p>
-            <p className="left-align">
-              I've been hunting in Grant county for 12 years. I love the
-              challenge of chasing ducks and geese. I also enjoy taking others
-              out to get you on the geese and giving you the opportunity to bag
-              a few. It is very rewarding to see your reactions on a successful
-              hunt. There's nothing like experiencing the sight of a flock of
-              geese dropping into our set of decoys. If you choose to book a
-              hunt with us, we'll look forward to taking you out to get you on
-              the birds.
-            </p>
-          </div>
+      <section className="section--inverse">
+        <h2 className="center">Zackary Russell</h2>
+        <h3 className="center">Co-Owner and Guide</h3>
+        <div className="even-columns about__not-even-columns">
           <img
+            className="about__img"
             src={co_owner_01}
             alt="Co-Owner"
             title="Co-Owner calling for Ducks"
             width="1000"
             height="1000"
           />
+          <p className="left-align about__body">
+            I've been hunting in Grant county for 12 years. I love the challenge
+            of chasing ducks and geese. I also enjoy taking others out to get
+            you on the geese and giving you the opportunity to bag a few. It is
+            very rewarding to see your reactions on a successful hunt. There's
+            nothing like experiencing the sight of a flock of geese dropping
+            into our set of decoys. If you choose to book a hunt with us, we'll
+            look forward to taking you out to get you on the birds.
+          </p>
         </div>
       </section>
-
       {/*********************************
        * Dustin's About Section
        *********************************/}
-
-      <section>
-        <div className="even-columns">
+      <section className="section--inverse">
+        <h2 className="center">Dustin Caldwell</h2>
+        <h3 className="center">Co-Owner and Guide</h3>
+        <div className="even-columns about__not-even-columns">
           <img
+            className="about__img"
             src={co_owner_02}
             alt="Co-Owner"
             title="Co-Owner calling for Ducks"
             width="1000"
             height="1000"
           />
-          <div>
-            <p>Dustin Caldwell</p>
-            <p>Co-Owner and Guide</p>
-            <p className="left-align">
-              Waterfowl hunting has had my heart for as long as I can remember.
-              The excitement of seeing birds committed to the spread is like no
-              other. Whether it be the big honkers or a mallard drake, we will
-              put you on them. Growing up I was brought along to hunt but that
-              meant I had to help with cleaning, packaging and labeling the
-              animal for the freezer. I've learned so many different things
-              about hunting over the years and I can't wait to show people the
-              skills and determination I've gained. As a kid my dad taught me
-              about hunting and preparing the meat, I could never thank him
-              enough for teaching me all I know. I enjoy getting to know all the
-              new people and taking them out to experience our way of hunting.
-              Getting to show people what we do and how we do it will always be
-              our passion. We are always looking forward to teaching others not
-              only a great time but a safe time as well. Be sure to get a hold
-              of us, you will not regret it!
-            </p>
-          </div>
+          <p className="left-align about__body">
+            Waterfowl hunting has had my heart for as long as I can remember.
+            The excitement of seeing birds committed to the spread is like no
+            other. Whether it be the big honkers or a mallard drake, we will put
+            you on them. Growing up I was brought along to hunt but that meant I
+            had to help with cleaning, packaging and labeling the animal for the
+            freezer. I've learned so many different things about hunting over
+            the years and I can't wait to show people the skills and
+            determination I've gained. As a kid my dad taught me about hunting
+            and preparing the meat, I could never thank him enough for teaching
+            me all I know. I enjoy getting to know all the new people and taking
+            them out to experience our way of hunting. Getting to show people
+            what we do and how we do it will always be our passion. We are
+            always looking forward to teaching others not only a great time but
+            a safe time as well. Be sure to get a hold of us, you will not
+            regret it!
+          </p>
         </div>
       </section>
-
       <CallToAction />
     </main>
   );
