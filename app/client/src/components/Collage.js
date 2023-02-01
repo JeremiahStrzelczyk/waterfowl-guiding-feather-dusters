@@ -7,20 +7,24 @@ import hunters5 from "../images/hunters-05.jpg";
 
 const Collage = () => {
   return (
-    <section className="black-section">
+    <section
+      className="section--inverse"
+      aria-label="A collage of images taken with our clients while out on guides"
+    >
       <div className="collage__container">
         <figure>
           <a href={hunters} download="featherdusters01">
             <img
               src={hunters}
-              alt="Hunters and Waterfowl"
-              title="Hunters showcasing their catch"
+              alt="Five feather dusters standing behind their geese. A link to download featherdusters01.jpg"
+              title="Hunters showcasing their geese in front of a trailer"
               width="1000"
               height="1000"
             />
           </a>
           <figcaption className="offscreen">
-            Hunters showcasing their catch
+            Zack and Dustin, along with their clients, pose in front of their
+            featherdusters trailer to showcase their catch for the day.
           </figcaption>
         </figure>
 
@@ -28,14 +32,15 @@ const Collage = () => {
           <a href={hunters} download="featherdusters02">
             <img
               src={hunters2}
-              alt="Hunters and Waterfowl"
-              title="Hunters showcasing their catch"
+              alt="Two hunters showcasing their catch for the day. A link to download featherdusters02.jpg"
+              title="Two hunters withe their geese"
               width="1000"
               height="1000"
             />
           </a>
           <figcaption className="offscreen">
-            Hunters showcasing their catch
+            Dustin and his friend stand in the snow, showcasing the geese they
+            pulled in for the day.
           </figcaption>
         </figure>
 
@@ -43,14 +48,15 @@ const Collage = () => {
           <a href={hunters3} download="featherdusters03">
             <img
               src={hunters3}
-              alt="Hunters and Waterfowl"
-              title="Hunters showcasing their catch"
+              alt="Three hunters posing with geese along the tailgate of a truck. A link to download featherdusters03.jpg"
+              title="Three hunters with their geese in the back of a pickup"
               width="1000"
               height="1000"
             />
           </a>
           <figcaption className="offscreen">
-            Hunters showcasing their catch
+            Our guides, Dustin and Zack, and a friend present their geese in the
+            back of a pickup to showcase their haul.
           </figcaption>
         </figure>
 
@@ -58,14 +64,14 @@ const Collage = () => {
           <a href={hunters4} download="featherdusters04">
             <img
               src={hunters4}
-              alt="Hunters and Waterfowl"
-              title="Hunters showcasing their catch"
+              alt="Our feather duster guides showing off their catch. A link to download featherdusters04.jpg"
+              title="Our guides posing with their geese."
               width="1000"
               height="1000"
             />
           </a>
           <figcaption className="offscreen">
-            Hunters showcasing their catch
+            Guides Zack and Dustin kneeling behind their geese for the day.
           </figcaption>
         </figure>
 
@@ -73,14 +79,15 @@ const Collage = () => {
           <a href={hunters} download="featherdusters05">
             <img
               src={hunters5}
-              alt="Hunters and Waterfowl"
-              title="Hunters showcasing their catch"
+              alt="Our guides and clients showing off a successful hunt. A link to download featherdusters05.jpg"
+              title="Four hunters with their catch in the snow"
               width="1000"
               height="1000"
             />
           </a>
           <figcaption className="offscreen">
-            Hunters showcasing their catch
+            Zack and Dustin pose with two clients to show off the geese they
+            caught for the day.
           </figcaption>
         </figure>
 
@@ -88,13 +95,15 @@ const Collage = () => {
           <a href={ducks_caught} download="featherdusters06">
             <img
               src={ducks_caught}
-              alt="Ducks in the grass"
+              alt="A pile of geese in the grass. A link to download ducks-caught.jpg"
               title="Ducks in the grass"
               width="1000"
               height="1000"
             />
           </a>
-          <figcaption className="offscreen">Ducks in the grass</figcaption>
+          <figcaption className="offscreen">
+            A large pile of geese displayed in the grass.
+          </figcaption>
         </figure>
       </div>
     </section>

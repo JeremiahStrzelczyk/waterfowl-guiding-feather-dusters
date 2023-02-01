@@ -33,10 +33,10 @@ textarea {
 :root {
   /* FONTS */
   --ff: "Nunito", sans-serif;
-  --ff-headings: "Fugaz One";
+  --ff-headings: arvo;
 
   /* Grows and shrinks font size with a min and max */
-  --fs: clamp(1rem, 2.5vw, 1.25rem); /* <smallest> <growth> <largest> */
+  --fs: clamp(1rem, 2.2vw, 1.5rem); /* <smallest> <growth> <largest> */
 
   /* HAMBURGER MENU */
   --fs-hamburger-icon: 1.8rem;
@@ -48,39 +48,53 @@ textarea {
 
   --bgcolor: var(--clr-light-primary);
   --bgcolor-secondary: var(--clr-dark-primary);
-  --color-primary: var(--clr-dark-primary);
-  --color-contrast: var(--clr-accent);
+  --clr-primary: var(--clr-dark-primary);
+  --clr-contrast: var(--clr-accent);
 
   --cta-bgcolor: var(--clr-accent);
-  --cta-color-primary: var(--clr-dark-primary);
+  --cta-clr-primary: var(--clr-dark-primary);
 
-  --nav-bg-color: var(--clr-dark-primary);
-  --nav-color: var(--clr-light-primary);
+  --nav-bg-clr: var(--clr-dark-primary);
+  --nav-clr: var(--clr-light-primary);
   --nav-clr-accent: rgba(255, 255, 255, 0.699);
-  --nav-height-min: calc(0.1 * 100vh);
+  --nav-height-min: calc(0.12 * 100vh);
   /* --nav-height-min: clamp(calc(0.05 * 100vh), 2px, calc(0.1 * 100vh)) */
   --nav-mobile-menu-border: 1px solid rgba(245, 245, 245, 0.2);
 
   --footer-height-min: 200px;
 
-  --border-color: var(--clr-dark-primary);
-  --link-color: var(--clr-light-primary);
+  --border-clr: var(--clr-dark-primary);
+  --link-clr: var(--clr-light-primary);
   --link-hover: hsla(0, 0%, 100%, 0.774);
   --link-active: var(--clr-accent);
 
   /* BORDERS */
-  --borders: 1px solid var(--border-color);
+  --borders: 1px solid var(--border-clr);
   --border-radius: 0.25rem;
 
+  /* STANDARD PADDING--BASE */
+  --padding-vertical-base-standard: 0.5em;
+  --padding-horizontal-base-standard: 2.5%;
+  /* --padding-horizontal-base-standard-sections: clamp(160px, 15%, 15%); */
+  --padding-horizontal-base-standard-sections: clamp(
+    80px,
+    calc(16px + 1vw),
+    220px
+  );
+  --padding-horizontal-base-standard-sections: calc(20px + 6vw);
+  --padding-horizontal-base-standard-sections: 15%;
+
   /* STANDARD PADDING */
-  --padding-tb: 0.25em;
-  /* --padding-side: 5%; */
-  --padding-side: 2.5%;
-  --footer-padding-tb: calc(var(--padding-tb) * 4);
+  --padding-std: var(--padding-vertical-base-standard)
+    var(--padding-horizontal-base-standard);
+  --padding-sections: var(--padding-vertical-base-standard)
+    var(--padding-horizontal-base-standard-sections);
+
+  --footer-padding-tb: calc(var(--padding-vertical-base-standard) * 4);
 
   /* STANDARD MARGIN */
-  --margin: clamp(1em, 2.5vw, 5rem) 0;
-  /* --margin-article: clamp(1em, 2.5vh, 5rem) 0; */
+  --margin-std: clamp(1em, 2.5vw, 5rem) 0;
+  /* --margin-std-article: clamp(1em, 2.5vh, 5rem) 0; */
 }
 
 /*******************************************************************
@@ -107,8 +121,12 @@ textarea {
   display: none;
 }
 
+.left-align {
+  text-align: left;
+}
+
 /* a:any-link {
-  color: var(--link-color);
+  color: var(--link-clr);
   cursor: pointer;
 } */
 
@@ -118,7 +136,7 @@ a:focus-visible {
 } */
 
 .link {
-  color: var(--link-color);
+  color: var(--link-clr);
   cursor: pointer;
 }
 
@@ -127,14 +145,15 @@ a:focus-visible {
   color: var(--link-hover);
 }
 
-/* Creates a black background that spans the entire view width. */
-/* Centers the content that is with it */
-/* For example, the collage uses this BG */
-.black-section {
-  background-color: var(--bgcolor-secondary);
-  width: 100vw;
-  display: flex;
-  justify-content: center;
+.even-columns {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  /* grid-auto-columns: 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
+
+  /* align-items: top; */
+  /* justify-items: left; */
 }
 
 /*******************************************************************
@@ -146,19 +165,13 @@ html {
   background-color: var(--bgcolor);
   background-color: var(--bgcolor);
 }
+
 body {
   min-height: 100vh;
-  color: var(--color-primary);
+  color: var(--clr-primary);
 
   margin: 0 auto; /* centers left and right */
 }
-
-/* React root div */
-/* #root {
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-} */
 
 h1,
 h2,
@@ -169,10 +182,49 @@ h3 {
 
 p {
   line-height: 1.5;
+  text-align: center;
+
+  padding: var(--padding-std);
+}
+
+/* All content should fit within a smaller width, 
+   but every other section element should have 
+   inverse bg and color */
+section {
+  padding: var(--padding-sections);
+  margin: var(--margin-std);
+}
+
+.section--inverse {
+  background-color: var(--bgcolor-secondary);
+  color: var(--clr-light-primary);
+
+  /* x-offset | y-offset | blur-radius | spread-radius | color */
+  box-shadow: 0 0 8px 2px #333;
+}
+
+/* main > section:nth-child(even) {
+  background-color: var(--bgcolor-secondary);
+  color: var(--clr-light-primary);
+
+  /* x-offset | y-offset | blur-radius | spread-radius | color */
+/* box-shadow: 0 0 8px 2px #333; */
+/* } */
+
+@media screen and (max-width: 1500px) {
+  section {
+    padding: var(--padding-vertical-base-standard) 8%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section {
+    padding: var(--padding-vertical-base-standard) 3%;
+  }
 }
 
 /* a:any-link {
-  color: var(--link-color);
+  color: var(--link-clr);
   cursor: pointer;
 } */
 
@@ -185,33 +237,18 @@ a:active {
   color: var(--link-active);
 }
 
-/*******************************************************************
-* || MAIN
-*******************************************************************/
-.main {
-  padding: var(--padding-tb) var(--padding-side);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.main__article {
-  margin: var(--margin);
-}
-
 /*****************************
  * || Nav
  ****************************/
 
 .nav {
-  background: var(--nav-bg-color);
+  background: var(--nav-bg-clr);
   min-height: var(--nav-height-min);
   display: flex;
   justify-content: center;
   align-items: center;
 
-  box-shadow: 0 0 10px var(--nav-bg-color);
+  box-shadow: 0 0 10px var(--nav-bg-clr);
 
   /* font-size: 1.2rem; */
   position: sticky;
@@ -230,11 +267,11 @@ a:active {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding: var(--padding-side);
+  padding: var(--padding-std);
 }
 
 .nav-container__logo {
-  color: var(--nav-color);
+  color: var(--nav-clr);
   cursor: pointer;
   text-decoration: none; /* Removes underline */
   display: flex;
@@ -250,34 +287,29 @@ a:active {
   /* justify-content: flex-end; */
 }
 
-/* .nav-container__item {
-  min-height: var(--nav-height-min);
-} */
-
 /* Puts a line under the nav element when */
 /* hovering over it */
 .nav-container__item:hover {
-  border-bottom: 2px solid var(--color-contrast);
+  border-bottom: 2px solid var(--clr-contrast);
 }
 
 .nav-container__link {
-  color: var(--nav-color);
+  color: var(--nav-clr);
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  /* height: 100%; */
 }
 
 /* Color the nav link of the page we're on */
 .active {
-  color: var(--color-contrast);
+  color: var(--clr-contrast);
 }
 
 /* Don't display the toggle by default */
 .nav-container__toggle {
   display: none;
-  color: var(--nav-color);
+  color: var(--nav-clr);
 }
 
 @media screen and (max-width: 576px) {
@@ -301,7 +333,7 @@ a:active {
      The menu slides into place with `left:0` 
   */
   .nav-container__menu.nav-container__menu--active {
-    background-color: var(--nav-bg-color);
+    background-color: var(--nav-bg-clr);
     left: 0;
     opacity: 1;
     transition: all 0.6s ease;
@@ -319,7 +351,7 @@ a:active {
 
   /* Increases each nav link (mobile mode) when hovered */
   .nav-container__link:hover {
-    color: var(--color-contrast);
+    color: var(--clr-contrast);
     transform: scale(1.2);
     transition: all 0.3s ease;
   }
@@ -359,14 +391,13 @@ a:active {
  ****************************/
 
 .collage__container {
-  width: 80%; /* Chosen to match the side margins of the rest of the page */
+  /* Displays collage as a 2r x 3c grid */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 1rem 0;
   gap: 1rem;
 }
 
-/* Images are rearranged as a 2x3 grid on screens 576+ */
+/* Images are rearranged as a 3r x 2c grid on screens 576+ */
 @media screen and (min-width: 576px) {
   .collage__container {
     grid-template-columns: repeat(3, 1fr);
@@ -377,11 +408,11 @@ a:active {
  * || Footer
  *************************/
 .footer {
-  background-color: var(--nav-bg-color);
-  color: var(--nav-color);
-  /* padding: var(--padding-tb) var(--padding-side); */
-  /* padding: max(calc(var(--padding-tb) * 2), 10px) var(--padding-side); */
-  padding: var(--footer-padding-tb) var(--padding-side);
+  background-color: var(--nav-bg-clr);
+  color: var(--nav-clr);
+  /* padding: var(--padding-std); */
+  /* padding: max(calc(var(--padding-vertical-base-standard) * 2), 10px) var(--padding-horizontal-base-standard); */
+  padding: var(--footer-padding-tb) var(--padding-horizontal-base-standard);
   /* padding: 30px 30px; */
   /* min-height: var(--nav-height-min); */
   min-height: var(--footer-height-min);
@@ -431,6 +462,8 @@ a:active {
   color: white;
   cursor: pointer;
   text-decoration: none;
+
+  width: 40%;
   border: 0;
   border-radius: 100vmax;
 
@@ -438,9 +471,58 @@ a:active {
   padding: 1.1em 2.5em;
   font-weight: bold;
   box-shadow: 0 1.25em 1em -1em var(--bgcolor-secondary);
+  margin: var(--margin-std);
 }
 
 .button:hover,
 .button:focus-visible {
   background-color: #333;
+}
+
+/*******************
+ * || CTA
+ *****************/
+.cta-wrapper {
+  margin: var(--margin-std);
+  max-width: 1200px;
+  margin: 4rem auto;
+}
+.cta {
+  background-color: var(--cta-bgcolor);
+  width: 80%;
+  margin: auto;
+  font-weight: bold;
+  box-shadow: 0 0 8px 2px #333;
+
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cta__link {
+  color: var(--clr-light-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/********************
+ * || About
+ *******************/
+.about__img {
+  padding: var(--padding-std);
+  /* grid-area: 1 / 1 / 2 / 2; */
+  grid-area: 1fr 1fr;
+  /* grid-area: 1 / 1 / 2 / 3; */
+}
+.about__body {
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+@media screen and (max-width: 576px) {
+  .about__not-even-columns {
+    display: block;
+  }
+
+  section {
+    padding: var(--padding-sections);
+  }
 }

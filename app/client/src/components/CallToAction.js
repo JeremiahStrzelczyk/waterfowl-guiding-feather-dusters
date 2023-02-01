@@ -2,11 +2,17 @@ import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   return (
-    <section className="cta" aria-label="Book a hunt">
-      <p>We're bringing in the geese this year.</p>
-      <p>You can to.</p>
-      <button className="button">Book Today!</button>
-    </section>
+    <div className="cta-wrapper">
+      <div className="cta">
+        <p className="center">We're bringing in the geese this year.</p>
+        <p className="center">You can to.</p>
+        <button className="button">
+          <Link to="/contact" className="cta__link">
+            Book Today!
+          </Link>
+        </button>
+      </div>
+    </div>
   );
 };
 

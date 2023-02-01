@@ -4,33 +4,32 @@ import Collage from "../components/Collage";
 
 const Home = () => {
   return (
-    <main className="main">
+    <main>
       {/***********************************
        * INTRODUCTION
        ******************************** */}
-      <article className="main__article">
+      <section>
         <p>
           Feather Dusters is a waterfowl guide with services based in Grant
           County and most hunts happening in and around Moses Lake, WA. We
           strive to give you a fun hunting experience and welcome all eligible
           hunters.
         </p>
-      </article>
+      </section>
       {/***********************************
        * IMAGES
        ******************************** */}
-      <article className="main__article" aria-label="Collage of duck hunters">
-        <Collage />
-      </article>
+
+      <Collage />
       {/***********************************
        * OUTRO
        ******************************** */}
-      <article className="main__article">
+      <section>
         <p>
           Thank you for taking the time to view our website. We hope you will
           all decide to join us out in the field this year.
         </p>
-      </article>
+      </section>
       <CallToAction />
     </main>
   );

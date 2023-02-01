@@ -22,7 +22,11 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="nav" data-overlay={isOpen}>
+      <nav
+        className="nav"
+        data-overlay={isOpen}
+        aria-label="primary-navigation"
+      >
         <div className="nav-container nav-wrapper">
           <Link
             to="/"

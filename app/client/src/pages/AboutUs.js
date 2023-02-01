@@ -4,24 +4,31 @@ import CallToAction from "../components/CallToAction";
 
 const AboutUs = () => {
   return (
-    <main className="main">
+    <main>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque libero,
+          voluptatem consectetur reprehenderit reiciendis error sunt, quia animi
+          quam earum dolores aperiam dignissimos ullam unde laborum itaque ea
+          deleniti sequi.
+        </p>
+      </section>
       {/*********************************
        * Zach's About Section
        *********************************/}
-      <article className="main__article even-columns">
-        <section className="main__section--about">
+      <section className="section--inverse">
+        <h2 className="center">Zackary Russell</h2>
+        <h3 className="center">Co-Owner and Guide</h3>
+        <div className="even-columns about__not-even-columns">
           <img
+            className="about__img"
             src={co_owner_01}
             alt="Co-Owner"
             title="Co-Owner calling for Ducks"
             width="1000"
             height="1000"
           />
-        </section>
-        <section className="main__section--about">
-          <h2>Zackary Russell</h2>
-          <h3>Co-Owner and Guide</h3>
-          <p>
+          <p className="left-align about__body">
             I've been hunting in Grant county for 12 years. I love the challenge
             of chasing ducks and geese. I also enjoy taking others out to get
             you on the geese and giving you the opportunity to bag a few. It is
@@ -30,18 +37,24 @@ const AboutUs = () => {
             into our set of decoys. If you choose to book a hunt with us, we'll
             look forward to taking you out to get you on the birds.
           </p>
-        </section>
-      </article>
-
+        </div>
+      </section>
       {/*********************************
        * Dustin's About Section
        *********************************/}
-
-      <article className="main__article even-columns">
-        <section className="main__section--about">
-          <h2>Dustin Caldwell</h2>
-          <h3>Co-Owner and Guide</h3>
-          <p>
+      <section className="section--inverse">
+        <h2 className="center">Dustin Caldwell</h2>
+        <h3 className="center">Co-Owner and Guide</h3>
+        <div className="even-columns about__not-even-columns">
+          <img
+            className="about__img"
+            src={co_owner_02}
+            alt="Co-Owner"
+            title="Co-Owner calling for Ducks"
+            width="1000"
+            height="1000"
+          />
+          <p className="left-align about__body">
             Waterfowl hunting has had my heart for as long as I can remember.
             The excitement of seeing birds committed to the spread is like no
             other. Whether it be the big honkers or a mallard drake, we will put
@@ -58,18 +71,8 @@ const AboutUs = () => {
             a safe time as well. Be sure to get a hold of us, you will not
             regret it!
           </p>
-        </section>
-        <section className="main__section--about">
-          <img
-            src={co_owner_02}
-            alt="Co-Owner"
-            title="Co-Owner calling for Ducks"
-            width="1000"
-            height="1000"
-          />
-        </section>
-      </article>
-
+        </div>
+      </section>
       <CallToAction />
     </main>
   );
