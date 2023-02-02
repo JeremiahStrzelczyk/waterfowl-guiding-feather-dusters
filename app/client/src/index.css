@@ -14,6 +14,7 @@
 img {
   display: block; /* removes gap since imgs are inline by default */
   border-radius: var(--border-radius);
+  padding: var(--padding-std);
 
   /* Img responsiveness */
   max-width: 100%; /* of parent */

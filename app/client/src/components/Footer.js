@@ -21,7 +21,7 @@ const Footer = () => {
         >
           <FaFacebookSquare className="footer__social-media-icon" />
         </a>
-        <p className="footer__copyright">
+        <p className="footer__copyright nowrap">
           &copy; {new Date().getFullYear()} Feather Dusters LLC
         </p>
       </div>
