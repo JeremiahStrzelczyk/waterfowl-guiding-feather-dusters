@@ -5,6 +5,9 @@ import Collage from "../components/Collage";
 const Home = () => {
   return (
     <main>
+      <header className="main__header">
+        <h1>Home</h1>
+      </header>
       {/***********************************
        * INTRODUCTION
        ******************************** */}
@@ -26,8 +29,12 @@ const Home = () => {
        ******************************** */}
       <section>
         <p>
-          Thank you for taking the time to view our website. We hope you will
-          all decide to join us out in the field this year.
+          Thank you for taking the time to view our website and for considering
+          Featherdusters for your waterfowl hunting adventure. We are grateful
+          for the opportunity to provide you with an unforgettable experience
+          and make memories that will last a lifetime. Our team is committed to
+          making your trip a success and we can't wait to guide you on this
+          exciting journey. Thank you for choosing Featherdusters.
         </p>
       </section>
       <CallToAction />

@@ -44,7 +44,7 @@ textarea {
 
   /* COLORS */
   --clr-dark-primary: black;
-  --clr-light-primary: white;
+  --clr-light-primary: whitesmoke;
   --clr-accent: orange;
 
   --bgcolor: var(--clr-light-primary);
@@ -139,6 +139,8 @@ a:focus-visible {
 .link {
   color: var(--link-clr);
   cursor: pointer;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .link:hover,
@@ -167,8 +169,14 @@ html {
   background-color: var(--bgcolor);
 }
 
+/* For content that does not eat up the entire height, we want the 
+   content to span the entire screen, but we also want some of the 
+   footer to show up */
+main {
+  min-height: calc(100vh - var(--footer-height-min));
+}
+
 body {
-  min-height: 100vh;
   color: var(--clr-primary);
 
   margin: 0 auto; /* centers left and right */
@@ -199,18 +207,11 @@ section {
 .section--inverse {
   background-color: var(--bgcolor-secondary);
   color: var(--clr-light-primary);
+  padding: 3em var(--padding-horizontal-base-standard-sections);
 
   /* x-offset | y-offset | blur-radius | spread-radius | color */
   box-shadow: 0 0 8px 2px #333;
 }
-
-/* main > section:nth-child(even) {
-  background-color: var(--bgcolor-secondary);
-  color: var(--clr-light-primary);
-
-  /* x-offset | y-offset | blur-radius | spread-radius | color */
-/* box-shadow: 0 0 8px 2px #333; */
-/* } */
 
 @media screen and (max-width: 1500px) {
   section {
@@ -224,18 +225,23 @@ section {
   }
 }
 
-/* a:any-link {
-  color: var(--link-clr);
-  cursor: pointer;
-} */
-
-/* a:hover,
-a:focus-visible {
-  color: var(--link-hover);
-} */
-
 a:active {
   color: var(--link-active);
+}
+
+/*****************************
+ * || Main
+ ****************************/
+.main__header {
+  text-align: center;
+  margin: var(--margin-std);
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .main__header {
+    display: block;
+  }
 }
 
 /*****************************
@@ -249,7 +255,7 @@ a:active {
   justify-content: center;
   align-items: center;
 
-  box-shadow: 0 0 10px var(--nav-bg-clr);
+  box-shadow: 0 0 10px #333;
 
   /* font-size: 1.2rem; */
   position: sticky;
@@ -284,8 +290,6 @@ a:active {
   align-items: center;
   justify-content: center;
   list-style: none; /* No bullets */
-  /* text-align: center; */
-  /* justify-content: flex-end; */
 }
 
 /* Puts a line under the nav element when */
@@ -411,11 +415,7 @@ a:active {
 .footer {
   background-color: var(--nav-bg-clr);
   color: var(--nav-clr);
-  /* padding: var(--padding-std); */
-  /* padding: max(calc(var(--padding-vertical-base-standard) * 2), 10px) var(--padding-horizontal-base-standard); */
   padding: var(--footer-padding-tb) var(--padding-horizontal-base-standard);
-  /* padding: 30px 30px; */
-  /* min-height: var(--nav-height-min); */
   min-height: var(--footer-height-min);
 
   display: flex;
@@ -436,7 +436,6 @@ a:active {
 
 .footer__hr {
   border: none;
-  /* height: clamp(0.04rem, 0.004rem, 0.004rem); */
 
   height: 0.004rem;
 
@@ -450,7 +449,6 @@ a:active {
 
 @media screen and (min-width: 576px) {
   .footer {
-    /* min-height: calc(var(--nav-height-min) * 3); */
     min-height: var(--footer-height-min);
   }
 }
@@ -510,9 +508,7 @@ a:active {
  *******************/
 .about__img {
   padding: var(--padding-std);
-  /* grid-area: 1 / 1 / 2 / 2; */
   grid-area: 1fr 1fr;
-  /* grid-area: 1 / 1 / 2 / 3; */
 }
 .about__body {
   grid-area: 1 / 2 / 2 / 4;
@@ -526,4 +522,12 @@ a:active {
   section {
     padding: var(--padding-sections);
   }
+}
+
+/********************
+ * || Contact
+ *******************/
+.contact__link {
+  color: rgba(255, 166, 0, 0.726);
+  font-weight: 900;
 }

@@ -5,12 +5,20 @@ import CallToAction from "../components/CallToAction";
 const AboutUs = () => {
   return (
     <main>
+      <header className="main__header">
+        <h1>About Featherdusters</h1>
+      </header>
+
       <section>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque libero,
-          voluptatem consectetur reprehenderit reiciendis error sunt, quia animi
-          quam earum dolores aperiam dignissimos ullam unde laborum itaque ea
-          deleniti sequi.
+          We are Featherdusters. We offer an unforgettable waterfowl hunting
+          experience for clients. Our team of experienced guides takes you on a
+          journey to hunt the most sought-after species including Canadian
+          geese, ducks, and snow geese in their natural habitats, with plans to
+          add more in the future. We hunt in a variety of environments,
+          including fields, rivers, and creeks, to ensure a diverse and exciting
+          trip. Join us on a thrilling adventure and make memories that will
+          last a lifetime.
         </p>
       </section>
       {/*********************************
