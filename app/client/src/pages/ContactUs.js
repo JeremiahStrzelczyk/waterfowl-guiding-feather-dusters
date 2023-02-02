@@ -21,18 +21,15 @@ const ContactUs = () => {
         </p>
       </section>
       <section className="section--inverse">
-        <p>
-          Email:{" "}
-          <span>
-            <a
-              className="link contact__link"
-              href="mailto:featherdusters01@gmail.com"
-            >
-              featherdusters01@gmail.com
-            </a>
-          </span>
-        </p>
-
+        <span>
+          <h3 className="inline">Email: </h3>
+          <a
+            className="link contact__link inline"
+            href="mailto:featherdusters01@gmail.com"
+          >
+            featherdusters01@gmail.com
+          </a>
+        </span>
         <div>
           <p>Guide: Zackary Russell</p>
           <p>

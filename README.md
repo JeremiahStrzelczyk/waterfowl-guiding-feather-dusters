@@ -4,6 +4,9 @@ A single-page web application designed to be used as the main landing page to at
 
 # Requirements
 
+- [ ] Color palette should be in conformance with W3C's Web Content Accessibility Guidelines.
+- [ ] The entire page should be accessible by ensuring conformance to W3C's Web Content Accessibliity Guidelines.
+
 ## Layout
 
 - [ ] A `Home` (landing) page that displays supplied images
@@ -16,8 +19,6 @@ A single-page web application designed to be used as the main landing page to at
 
 - [ ] Each component of the website should look nice on a variety of screen sizes and layouts.
 - [ ] Clicking and image should take the user to the full-res view of the image
-
-[Project Board](https://github.com/JeremiahStrzelczyk/waterfowl-guiding-feather-dusters/projects/1)
 
 # Credit
 

@@ -7,11 +7,10 @@ import { BrowserRouter, Routes as Switch, Route } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Switch>
-        <Route path="/*" element={<App />} />
-      </Switch>
-    </BrowserRouter>
-  </React.StrictMode>
+  // <BrowserRouter>
+  //   <Switch>
+  //     <Route path="/*" element={<App />} />
+  //   </Switch>
+  // </BrowserRouter>
+  <App />
 );
