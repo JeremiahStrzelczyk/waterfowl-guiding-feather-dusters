@@ -6,6 +6,7 @@ A single-page web application designed to be used as the main landing page to at
 
 - [ ] Color palette should be in conformance with W3C's Web Content Accessibility Guidelines.
 - [ ] The entire page should be accessible by ensuring conformance to W3C's Web Content Accessibliity Guidelines.
+- [ ] Navigation should be easy by ensuring users are presented with options for navigation while navigating within expected and unexpected regions.
 
 ## Layout
 
