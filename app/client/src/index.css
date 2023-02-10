@@ -531,3 +531,7 @@ a:active {
   color: rgba(255, 166, 0, 0.726);
   font-weight: 900;
 }
+
+.contact__wrapper {
+  margin-bottom: 1.2rem;
+}

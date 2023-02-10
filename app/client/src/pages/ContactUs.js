@@ -20,32 +20,28 @@ const ContactUs = () => {
           Call, text, and email us and we will happily answer your questions.
         </p>
       </section>
-      <section className="section--inverse">
-        <span>
-          <h3 className="inline">Email: </h3>
+      <section className="section--inverse center">
+        <p className="contact__wrapper">
+          <h3>Email</h3>
           <a
-            className="link contact__link inline"
+            className="link contact__link"
             href="mailto:featherdusters01@gmail.com"
           >
             featherdusters01@gmail.com
           </a>
-        </span>
-        <div>
-          <p>Guide: Zackary Russell</p>
-          <p>
-            <a className="link contact__link" href="tel:5094318165">
-              509-770-5571
-            </a>
-          </p>
-        </div>
-        <div>
-          <p>Guide: Dustin Caldwell</p>
-          <p>
-            <a className="link contact__link" href="tel:5097938914">
-              509-793-8914
-            </a>
-          </p>
-        </div>
+        </p>
+        <p className="contact__wrapper">
+          <h3>Guide: Zackary Russell</h3>
+          <a className="link contact__link" href="tel:5094318165">
+            509-770-5571
+          </a>
+        </p>
+        <p className="contact__wrapper">
+          <h3>Guide: Dustin Caldwell</h3>
+          <a className="link contact__link" href="tel:5097938914">
+            509-793-8914
+          </a>
+        </p>
       </section>
     </main>
   );
