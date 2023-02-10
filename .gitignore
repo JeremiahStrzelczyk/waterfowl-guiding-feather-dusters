@@ -2,6 +2,8 @@
 
 .env
 
+**/Clipboard/**
+
 # dependencies
 /node_modules
 /app/client/node_modules

@@ -1,21 +1,26 @@
 # Waterfowl Guiding - Feather Dusters
 
-A full stack web application designed to be used as the main user interface to attract and build a strong client base in hunting.
+A single-page web application designed to be used as the main landing page to attract and build a strong client base in hunting.
 
-# Dependencies
+# Requirements
 
-- [Bootstrap](https://react-bootstrap.github.io/getting-started/introduction): For styling across the website.
-- [Express backend](https://expressjs.com/): Framework used to wrap HTTP requests and responses.
-- [React Router](https://v5.reactrouter.com/web/guides/quick-start): Used to navigate across the website.
-- [React Router Bootstrap](https://www.npmjs.com/package/react-router-bootstrap): Used to wrap 'BrowserRouter' `Link`s around Bootstrap styled navigation links
-- [Styled Components](https://styled-components.com/)
-- [React Icons](https://react-icons.github.io/react-icons/)
+- [ ] Color palette should be in conformance with W3C's Web Content Accessibility Guidelines.
+- [ ] The entire page should be accessible by ensuring conformance to W3C's Web Content Accessibliity Guidelines.
+- [ ] Navigation should be easy by ensuring users are presented with options for navigation while navigating within expected and unexpected regions.
 
-```
-npm i react-bootstrap bootstrap
-npm i express
-npm i react-router-dom
-npm i react-router-bootstrap
-npm i styled-components
-npm i react-icons
-```
+## Layout
+
+- [ ] A `Home` (landing) page that displays supplied images
+- [ ] An `About` page that displays an image of both co-owners, along with narratives from each (both supplied)
+- [ ] A `Contact` page that simply supplies the company email and phone numbers.
+- [ ] A navigation bar that is easy to use and understand
+- [ ] A footer displaying company logo and social media icons
+
+## Design
+
+- [ ] Each component of the website should look nice on a variety of screen sizes and layouts.
+- [ ] Clicking and image should take the user to the full-res view of the image
+
+# Credit
+
+This application makes use of a 3rd party Hook by Luke Denton [useScrollLock](https://github.com/denno020/useScrollLock). This hook aims to disable the ability for the user to scroll when the mobile menu is open.
