@@ -54,7 +54,6 @@ const Nav = () => {
             }
             onClick={() => resetNav()}
           >
-            {/* */}
             {/*** HOME ***/}
             <li className="nav-container__item">
               <NavLink to="/" className="nav-container__link">

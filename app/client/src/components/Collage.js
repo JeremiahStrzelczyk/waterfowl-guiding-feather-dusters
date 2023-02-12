@@ -5,6 +5,13 @@ import hunters3 from "../images/hunters-03.jpg";
 import hunters4 from "../images/two-guides.jpg";
 import hunters5 from "../images/hunters-05.jpg";
 
+import raw_hunters_3024x4032 from "../images/raw_hunters_3024x4032.JPG";
+import raw_hunters_02_4032x3024 from "../images/raw_hunters-02_4032x3024.JPG";
+import raw_hunters_03_1242x2688 from "../images/raw_hunters-03_1242x2688.jpeg";
+import raw_two_guides_3024x4032 from "../images/raw_two-guides_3024x4032.JPG";
+import raw_hunters_05_3024x4032 from "../images/raw_hunters-05_3024x4032.jpg";
+import raw_ducks_caught_4032x3024 from "../images/raw_ducks-caught_4032x3024.JPG";
+
 const Collage = () => {
   return (
     <section
@@ -13,7 +20,8 @@ const Collage = () => {
     >
       <div className="collage__container">
         <figure>
-          <a href={hunters} download="featherdusters01">
+          <a href={raw_hunters_3024x4032}>
+            {/* <a href={hunters} download="featherdusters01"> */}
             <img
               src={hunters}
               alt="Five feather dusters standing behind their geese. A link to download featherdusters01.jpg"
@@ -29,7 +37,7 @@ const Collage = () => {
         </figure>
 
         <figure>
-          <a href={hunters} download="featherdusters02">
+          <a href={raw_hunters_02_4032x3024}>
             <img
               src={hunters2}
               alt="Two hunters showcasing their catch for the day. A link to download featherdusters02.jpg"
@@ -45,7 +53,8 @@ const Collage = () => {
         </figure>
 
         <figure>
-          <a href={hunters3} download="featherdusters03">
+          <a href={raw_hunters_03_1242x2688}>
+            {/* <a href={raw_hunters_03_1242x2688} download="featherdusters03"> */}
             <img
               src={hunters3}
               alt="Three hunters posing with geese along the tailgate of a truck. A link to download featherdusters03.jpg"
@@ -61,7 +70,8 @@ const Collage = () => {
         </figure>
 
         <figure>
-          <a href={hunters4} download="featherdusters04">
+          <a href={raw_two_guides_3024x4032}>
+            {/* <a href={hunters4} download="featherdusters04"> */}
             <img
               src={hunters4}
               alt="Our feather duster guides showing off their catch. A link to download featherdusters04.jpg"
@@ -76,7 +86,8 @@ const Collage = () => {
         </figure>
 
         <figure>
-          <a href={hunters} download="featherdusters05">
+          <a href={raw_hunters_05_3024x4032}>
+            {/* <a href={hunters} download="featherdusters05"> */}
             <img
               src={hunters5}
               alt="Our guides and clients showing off a successful hunt. A link to download featherdusters05.jpg"
@@ -92,7 +103,8 @@ const Collage = () => {
         </figure>
 
         <figure>
-          <a href={ducks_caught} download="featherdusters06">
+          <a href={raw_ducks_caught_4032x3024}>
+            {/* <a href={ducks_caught} download="featherdusters06"> */}
             <img
               src={ducks_caught}
               alt="A pile of geese in the grass. A link to download ducks-caught.jpg"

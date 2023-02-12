@@ -1,5 +1,7 @@
 import co_owner_01 from "../images/co-owner.jpg";
 import co_owner_02 from "../images/co-owner-02.jpg";
+import raw_co_owner_01_1169x907 from "../images/raw_co_owner_01_1169x907.JPG";
+import raw_co_owner_02_1206x2208 from "../images/raw_co_owner_02_1206x2208.JPG";
 import CallToAction from "../components/CallToAction";
 
 const AboutUs = () => {
@@ -27,14 +29,21 @@ const AboutUs = () => {
         <h2 className="center">Zackary Russell</h2>
         <h3 className="center">Co-Owner and Guide</h3>
         <div className="even-columns about__not-even-columns">
-          <img
-            className="about__img"
-            src={co_owner_01}
-            alt="Co-Owner"
-            title="Co-Owner calling for Ducks"
-            width="1000"
-            height="1000"
-          />
+          <figure>
+            <a href={raw_co_owner_01_1169x907}>
+              <img
+                className="about__img"
+                src={co_owner_01}
+                alt="Co-Owner"
+                title="Co-Owner calling for Ducks"
+                width="1000"
+                height="1000"
+              />
+            </a>
+            <figcaption className="offscreen">
+              Co-owner Zack calling for ducks.
+            </figcaption>
+          </figure>
           <p className="left-align about__body">
             I've been hunting in Grant county for 12 years. I love the challenge
             of chasing ducks and geese. I also enjoy taking others out to get
@@ -53,14 +62,21 @@ const AboutUs = () => {
         <h2 className="center">Dustin Caldwell</h2>
         <h3 className="center">Co-Owner and Guide</h3>
         <div className="even-columns about__not-even-columns">
-          <img
-            className="about__img"
-            src={co_owner_02}
-            alt="Co-Owner"
-            title="Co-Owner calling for Ducks"
-            width="1000"
-            height="1000"
-          />
+          <figure>
+            <a href={raw_co_owner_02_1206x2208}>
+              <img
+                className="about__img"
+                src={co_owner_02}
+                alt="Co-Owner"
+                title="Co-Owner calling for Ducks"
+                width="1000"
+                height="1000"
+              />
+            </a>
+            <figcaption className="offscreen">
+              Co-owner Dustin showing off a duck.
+            </figcaption>
+          </figure>
           <p className="left-align about__body">
             Waterfowl hunting has had my heart for as long as I can remember.
             The excitement of seeing birds committed to the spread is like no
