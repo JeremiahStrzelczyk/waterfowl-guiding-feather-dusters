@@ -8,15 +8,16 @@ import UnderConstruction from "./components/UnderConstruction";
 
 const App = () => {
   return (
-    <Switch>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
+    <div> Hello, World! </div>
+    // <Switch>
+    //   <Route path="/" element={<Layout />}>
+    //     <Route index element={<Home />} />
 
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Route>
-    </Switch>
+    //     <Route path="about" element={<About />} />
+    //     <Route path="contact" element={<Contact />} />
+    //     <Route path="*" element={<NotFoundPage />} />
+    //   </Route>
+    // </Switch>
   );
 };
 
