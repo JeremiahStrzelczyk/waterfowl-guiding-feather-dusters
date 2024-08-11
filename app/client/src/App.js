@@ -8,7 +8,9 @@ import UnderConstruction from "./components/UnderConstruction";
 
 const App = () => {
   return (
-    <div> Hello, World! </div>
+    <div> 
+      <h1> Hello, World! </h1>
+    </div>
     // <Switch>
     //   <Route path="/" element={<Layout />}>
     //     <Route index element={<Home />} />
